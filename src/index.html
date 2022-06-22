@@ -1,0 +1,3639 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LINE GROUND</title>
+
+    <!-- og -->
+    <meta property="og:title" content="LINE GROUND" />
+    <meta property="og:description" content="사용자들의 삶을 더욱 편리하고 즐겁게 바꾸기 위한 LINE의 디자인을 소개합니다." />
+    <meta property="og:image" content="https://ground.line.me/asset/images/favicon/ogTag.png" />
+    <meta property="og:url" content="https://ground.line.me/" />
+    <!-- og -->
+
+    <!-- twitter -->
+    <meta name="twitter:title" content="LINE GROUND" />
+    <meta name="twitter:description" content="사용자들의 삶을 더욱 편리하고 즐겁게 바꾸기 위한 LINE의 디자인을 소개합니다." />
+    <meta name="twitter:image" content="https://ground.line.me/asset/images/favicon/ogTag.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://ground.line.me/" />
+    <!-- twitter -->
+
+    <!-- 기기 판단 -->
+    <script>
+      let isIndexMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+
+      if (isIndexMobile) {
+        location.replace(`m_index.html`);
+      }
+    </script>
+    <!-- 기기 판단 -->
+
+    <!-- Google Analytics -->
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'G-4X0W3BHZT8', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4X0W3BHZT8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-4X0W3BHZT8');
+    </script>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../asset/images/favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../asset/images/favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../asset/images/favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../asset/images/favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../asset/images/favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="../asset/images/favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../asset/images/favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../asset/images/favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../asset/images/favicon/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../asset/images/favicon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../asset/images/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../asset/images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../asset/images/favicon/favicon-16x16.png" />
+    <link rel="shortcut icon" href="../asset/images/favicon/favicon.ico" />
+
+    <link rel="stylesheet" href="../asset/css/common.css" />
+    <script src="../asset/js/jquery-3.6.0.js"></script>
+
+    <!-- gsap (scrollTrigger) plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CustomEase.min.js"></script>
+    <!-- gsap plugin -->
+
+    <!-- i18next (multi message) plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-xhr-backend/3.2.2/i18nextXHRBackend.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/8.1.0/i18next.js"></script>
+    <script src="../asset/js/message.js"></script>
+    <!-- i18next plugin -->
+
+    <!-- lottie plugin -->
+    <script src="../asset/js/lottie-player.js"></script>
+    <!-- lottie plugin -->
+
+    <!-- lethargy (매직 마우스 관성 체크) -->
+    <script src="../asset/js/lethargy.js"></script>
+    <!-- lethargy (매직 마우스 관성 체크) -->
+
+    <script src="../asset/js/common.js"></script>
+    <script src="../asset/js/scrollEvent.js"></script>
+  </head>
+
+  <body class="familyKR krBody">
+    <div id="wrap">
+      <!-- loading -->
+      <section id="loading">
+        <p class="loadingLogo">ground</p>
+      </section>
+
+      <!-- intro -->
+      <section id="intro">
+        <div class="introBg"></div>
+        <div class="introTextBox">
+          <p class="introLogo">ground</p>
+          <span class="introDesc txtBr" data-i18n="intro"></span>
+        </div>
+      </section>
+
+      <!-- header -->
+      <header id="header" class="">
+        <div class="headWrap">
+          <h1 id="logo">
+            <a href="./index.html">ground</a>
+          </h1>
+          <div class="headCont">
+            <div class="viewPrj">
+              <a href="javascript:;" class="viewPrjBtn viewPrjAll hoverEv">
+                <span></span>
+                <b>VIEW ALL PRODUCTS<em class="hoverBar"></em></b>
+              </a>
+            </div>
+            <div class="lang">
+              <ul class="nowLang">
+                <li>
+                  <p>KR</p>
+                  <ul class="langList">
+                    <li>
+                      <a href="javascript:;" class="active hoverEv">KR<em class="hoverBar"></em></a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" class="hoverEv">JP<em class="hoverBar"></em></a>
+                    </li>
+                    <li>
+                      <a href="javascript:;" class="hoverEv">EN<em class="hoverBar"></em></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- quick -->
+      <div id="quick">
+        <div class="quickBox">
+          <a href="javascript:;">
+            <span class="quickCir">
+              <svg width="40" height="40" viewBox="0 0 40 40">
+                <circle class="gauge" cx="20" cy="20" r="14" fill="none" stroke="black" stroke-width="8" />
+                <circle cx="20" cy="20" r="18" fill="none" stroke="black" />
+                <circle cx="20" cy="20" r="16" fill="none" stroke="black" />
+                <circle cx="20" cy="20" r="14" fill="none" stroke="black" />
+                <circle cx="20" cy="20" r="12" fill="none" stroke="black" />
+                <circle cx="20" cy="20" r="10" fill="none" stroke="black" />
+              </svg>
+              <i class="quickImg"><img src="../asset/images/common/more_arr.svg" alt="CHAPTERS" /></i>
+            </span>
+            <b class="quickHoverText">CHAPTERS</b>
+          </a>
+        </div>
+      </div>
+
+      <!-- quick menu -->
+      <div id="quickMenu">
+        <div class="quickMenuBox">
+          <ul class="quickMenuList">
+            <li class="quickMenuItem">
+              <a href="javascript:;" data-item="#about" class="quickMenuBtn hoverEv" id="aboutBtn">about<em class="hoverBar h8"></em></a>
+            </li>
+            <li class="quickMenuItem">
+              <a href="javascript:;" data-item="#product" class="quickMenuBtn hoverEv" id="productBtn">projects<em class="hoverBar h8"></em></a>
+            </li>
+            <li class="quickMenuItem">
+              <a href="javascript:;" data-item="#culture" class="quickMenuBtn hoverEv" id="cultureBtn">culture<em class="hoverBar h8"></em></a>
+            </li>
+            <li class="quickMenuItem">
+              <a href="javascript:;" data-item="#greeting" class="quickMenuBtn hoverEv" id="greetingBtn">remarks<em class="hoverBar h8"></em></a>
+            </li>
+            <li class="quickMenuItem">
+              <a href="javascript:;" data-item="#event" class="quickMenuBtn hoverEv" id="eventBtn">in conclusion<em class="hoverBar h8"></em></a>
+            </li>
+          </ul>
+          <a href="javascript:;" class="quickMenuClose">
+            <img src="../asset/images/common/close_b.svg" alt="메뉴 닫기" />
+          </a>
+        </div>
+      </div>
+
+      <!-- view all product -->
+      <div id="viewAll">
+        <div class="viewAllWrap">
+          <div class="viewAllContainer">
+            <div class="viewScroll">
+              <lottie-player src="../asset/images/lottie/scrollmore_detail.json" speed="1" loop autoplay></lottie-player>
+            </div>
+            <div class="viewAllList">
+              <!-- viewMouseEvent -->
+              <div class="viewAllText viewAllItem active">
+                <div class="viewAllPrjInner p0 viewMouseEvent" data-item="enjoy">
+                  <p class="txtBr">
+                    <b>Enjoy The Challenges</b>
+                    <sub data-i18n="allProduct.intro"></sub>
+                  </p>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="linePay">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.pay.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/linePay_img.png" alt="LINE PAY" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="lineVoom">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.voom.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/lineVoom_img.png" alt="LINE VOOM" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="lineNewDesign">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.newDesign.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/lineNewDesign_img.png" alt="LINE New Design" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="lineSearch">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.search.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/lineSearch_img.png" alt="LINE Search" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllText viewAllItem">
+                <div class="viewAllPrjInner p0 viewMouseEvent" data-item="mission1">
+                  <p>
+                    <b>CREATIVE MISSION 01</b>
+                    <sub data-i18n="allProduct.mission1" class="txtBr"></sub>
+                  </p>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="lineAvatar">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.avatar.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/lineAvatar_img.png" alt="LINE Avatar" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="lineCharacter">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.character.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/lineCharacter_img.png" alt="LINE Character" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="lineSeedSans">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.seed.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/lineSeedSans_img.png" alt="LINE Seed Sans" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="lineDesignSystem">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.designSystem.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/lineDesignSystem_img.png" alt="LINE Design System" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="lineBank">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.bank.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/lineBank_img.png" alt="LINE Bank" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="lineDemaecan">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.demaecan.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/lineDemaecan_img.png" alt="Demaecan" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllText viewAllItem">
+                <div class="viewAllPrjInner p0 viewMouseEvent" data-item="mission2">
+                  <p>
+                    <b>CREATIVE MISSION 02</b>
+                    <sub data-i18n="allProduct.mission2" class="txtBr"></sub>
+                  </p>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="lineDoctor">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.doctor.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/lineDoctor_img.png" alt="LINE Doctor" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="lineMan">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.man.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/lineMan_img.png" alt="LINE Man" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllText viewAllItem">
+                <div class="viewAllPrjInner p0 viewMouseEvent" data-item="mission3">
+                  <p>
+                    <b>CREATIVE MISSION 03</b>
+                    <sub data-i18n="allProduct.mission3" class="txtBr"></sub>
+                  </p>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="lineTheme">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.fukuoka.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/lineTheme_img.png" alt="LINE Theme" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="lineRamadan">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.ramadan.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/lineRamadan_img.png" alt="LINE Ramadan" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="linePenghuFestival">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.TWPenghu.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/linePenghuFestival_img.png" alt="LINE Penghu Festival" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllText viewAllItem">
+                <div class="viewAllPrjInner p0 viewMouseEvent" data-item="mission4">
+                  <p>
+                    <b>CREATIVE MISSION 04</b>
+                    <sub data-i18n="allProduct.mission4" class="txtBr"></sub>
+                  </p>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="lineCall">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.call.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/lineCall_img.png" alt="LINE Call" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="lineBT21">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.bts21.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/lineBT21_img.png" alt="LINE BTS21" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="lineNews">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.news.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/lineNews_img.png" alt="LINE News" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="lineBiz">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.biz.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/lineBiz_img.png" alt="LINE Biz" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllText viewAllItem">
+                <div class="viewAllPrjInner p0 viewMouseEvent" data-item="mission5">
+                  <p>
+                    <b>CREATIVE MISSION 05</b>
+                    <sub data-i18n="allProduct.mission5" class="txtBr"></sub>
+                  </p>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="lineBlockchain">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.blockChain.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/lineBlockchain_img.png" alt="LINE Blockchain" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="lineNewsAwards">
+                  <div class="viewItemText">
+                    <p data-i18n="allProduct.awards.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/lineNewsAwards_img.png" alt="LINE News Awards" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllText viewAllItem">
+                <div class="viewAllPrjInner p0 viewMouseEvent" data-item="mission6">
+                  <p>
+                    <b>CREATIVE MISSION 06</b>
+                    <sub data-i18n="allProduct.mission6" class="txtBr"></sub>
+                  </p>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="lineBitmax">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.bitmax.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/lineBitmax_img.png" alt="LINE BITMAX" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="viewAllPrj viewAllItem">
+                <div class="viewAllPrjInner viewMouseEvent listHover" data-item="lineOffice">
+                  <div class="viewItemText">
+                    <p class="txtBr" data-i18n="allProduct.office.menu"></p>
+                  </div>
+                  <div class="viewItemImg">
+                    <div class="viewThumb">
+                      <img src="../asset/images/common/detail/lineOffice_img.png" alt="LINE Office" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="viewPaging">
+              <div class="viewPagingBox">
+                <div class="viewPagingBtn">
+                  <a href="javascript:;" class="active">
+                    <span></span>
+                    <sub class="pagingTitle">01<br />Enjoy The Challenges</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">02<br />LINE Pay</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">03<br />LINE Voom</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">04<br />LINE New Design</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">05<br />LINE Search</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">06<br />Mission 01</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">07<br />LINE Avatar</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">08<br />Character Stickers</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">09<br />LINE Seed Sans</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">10<br />LINE Design System</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">11<br />LINE Bank</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">12<br />Demaecan</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">13<br />Mission 02</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">14<br />LINE Doctor</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">15<br />LINE MAN Wongnai</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">16<br />Mission 03</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">17<br />Color Theme</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">18<br />LINE Ramadan</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">19<br />LINE Penghu Festival</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">20<br />Mission 04</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">21<br />LINE Call</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">22<br />BT21 VIDEOS</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">23<br />LINE NEWS</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">24<br />LINE Biz Partner Award</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">25<br />Mission 05</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">26<br />LINE Blockchain</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">27<br />LINE NEWS AWARDS</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">28<br />Mission 06</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">29<br />LINE BITMAX</sub>
+                  </a>
+                </div>
+                <div class="viewPagingBtn">
+                  <a href="javascript:;">
+                    <span></span>
+                    <sub class="pagingTitle">30<br />LINE Office</sub>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- view all product -->
+
+      <!-- 상세페이지 List -->
+      <!-- layer Popup Bg -->
+      <div class="detailBg"></div>
+      <!-- layer Popup Bg -->
+
+      <!-- Enjoy The Challenges -->
+      <div class="detailPopup layerPopup deTextPopup" id="enjoyLayer" data-index-number="1" data-item="enjoy">
+        <div class="layerWrap green">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>01/30</p>
+              <span></span>
+              <p>Enjoy The Challenges</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerTextArea">
+            <div class="layerTextInner">
+              <div class="layerTextBox">
+                <b class="txtBr">Enjoy <br />The <br />Challenges</b>
+                <p data-i18n="allProduct.intro">LINE은 어려운 도전을 마다하지 않고 신선하고 놀라운 해법을 내놓고 있다. 현재 230개국 이상의 나라에서 사용되고 있으며 그 나라에 맞는 상품과 서비스를 개발해 사용자들에게 많은 찬사를 받는다. 사용자들의 삶을 더욱 편리하고 즐겁게 바꾸기 위한 LINE의 디자인을 소개한다.</p>
+              </div>
+            </div>
+            <div class="layerTextBtnBox">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="linePay">
+                  <img src="../asset/images/common/detail/linePay_img.png" alt="LINE Pay" />
+                  <span class="txtBr">
+                    Next<br />
+                    LINE Pay
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Enjoy The Challenges -->
+
+      <!-- LINE Pay -->
+      <div class="detailPopup layerPopup" id="linePayLayer" data-index-number="2" data-item="linePay">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>02/30</p>
+              <span></span>
+              <p>line pay</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.pay.title" class="txtBr">세계인이 선택한 <br />스마트 결제 <br />서비스</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/linePay.svg" alt="LINE Pay logo" />
+                  </div>
+                  <div class="layerMainHistory" data-i18n="allProduct.pay.history">
+                    <p class="txtBr">굿디자인 어워드 2020 <br />BEST 100 선정</p>
+                    <p class="txtBr">iF 어워드 2020 <br />프로덕트 부문 수상</p>
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">LINE Plus BX Design, <br />LINE BIZ PLUS Biz UI, <br />LINE Pay Taiwan <br />Limited Design</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.pay.subdesc">다른 법인 디자이너들과 긴밀한 소통이 업무에 도움이 됩니다. LINE BAND를 개설해 온라인으로 디자인을 공유하며 서로 필요한 정보를 얻고, HQ의 서포트를 받으며 대형 프로젝트에 참여할 수 있습니다. 전통적인 디자인 회사는 클라이언트가 전체적인 흐름을 리드하지만 LINE은 디자이너의 의견을 존중하고 수용합니다.</div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/linePay_img.png" alt="" />
+              </div>
+            </div>
+            <div class="layerGrid layerInner">
+              <div class="columns w480">
+                <p>
+                  <b data-i18n="allProduct.pay.col1.head">LINE Pay는 사람과 돈, 서비스 간의 <br />거리를 좁히며 모바일 핀테크 <br />세계를 리드하고 있다.</b>
+                  <span data-i18n="allProduct.pay.col1.sub">세계인이 선택한 스마트 결제 서비스</span>
+                  <sub data-i18n="allProduct.pay.col1.txt">2014년부터 시작된 LINE의 온라인 결제, 송금 서비스 LINE Pay는 Cashless, Walletless를 넘어 빠르고 간단한 결제 방식으로 편리하고 스마트한 라이프스타일을 제안하고 있다. 2021년 11월 기준 일본, 대만, 태국을 비롯 전 세계 6,000만 명 이상의 사용자가 LINE Pay를 사용하고 있다.</sub>
+                  <span data-i18n="allProduct.pay.col2.sub">국가별 유연하고 미래지향적인 대응</span>
+                  <sub data-i18n="allProduct.pay.col2.txt"
+                    >LINE Pay는 사용자들에게 더욱 편리한 핀테크 경험을 제공하는 서비스라는 목표는 같지만, 국가별로 금융에 대한 인식 차이와 새로운 것을 받아들이는 속도, 접근 방식이 다르다는 것에 주목했다. 이에 서비스 국가의 문화를 이해하고 서로의 시각차를 좁히기 위해 서비스 릴리즈 후 현지 사용자 경험을 분석하고 타 서비스와 비교한 데이터를 모아 디자인에 반영하고 있다. LINE Pay는 다양한 매체의 확장에 유연하게 적용하도록 로고를 리브랜딩했다. 매끈하고 확장할 수 있는 디자인으로 비즈니스 잠재력을
+                    높이는 동시에 사용자에게 친숙함을 제공하고자 했다. 로고에 신용카드 형태를 상징적으로 반영해 미래에 한발 앞서 진화하는 ‘The Next Payment Platform’이라는 스마트한 금융 플랫폼 서비스의 가치를 담아 ‘굿 디자인 어워드 2020(Good Design Award 2020)’에서 ‘베스트 100' 부문에 선정되기도 했다.</sub
+                  >
+                  <img src="../asset/images/common/detail/linePay_img01.png" alt="" />
+                  <span data-i18n="allProduct.pay.col3.sub">신뢰할 만한 대만의 LINE Pay</span>
+                  <sub data-i18n="allProduct.pay.col3.txt"
+                    >2015년 대만에 상륙한 LINE Pay는 대만 모바일 결제 서비스 중 대만 국민에게 가장 많은 선택을 받았다. (모바일 결제서비스 사용자 중 59.3%, 2021년 10월 기준) 코로나 사태가 불러온 온라인 금융 서비스의 급격한 발전에 따라 LINE Pay는 2020년 결제 건수 1.26억 건, 현재 대만 전역의 28만 개 가맹점을 보유하며 길거리, 야시장 등 모든 곳에서 사용되고 있다. LINE Pay는 결제뿐만 아니라 기부도 할 수 있는데, 일반 기부 업체에 비해 신뢰도가 높고 실제로도 기부금이 어떻게 사용되는지 투명하게 알 수
+                    있어, 대만 국민의 대표 기부 플랫폼이 되었다. 2021년 4월, 대형 열차 사고에 대만 국민들은 LINE Pay를 통해 모금한 바 있다. 기부 캠페인 진행 시에는 온라인 배너를 만들어 소셜미디어로 홍보하며 LINE Pay의 따뜻하고 신뢰할 수 있는 브랜드 이미지를 담았다. LINE Pay는 로고가 없더라도 사용자들이 브랜드를 한눈에 알아볼 수 있도록 유니크한 디자인 스타일을 확립하고자 한다. LINE 캐릭터를 사용하지 않고도 LINE Pay만의 특성을 드러내는 POSM(상품 판매대에 설치되는 판촉물)을 제작 중이며 소상공인들이
+                    LINE Pay를 더 쉽게 이용하도록 단계를 최소화하고, 최대한 직관적으로 정보를 알 수 있게 하는 LINE Pay 머천트 앱(LINE Pay 好夥伴)을 21년 1월 22일 출시 했다. 나아가 대만 모바일 결제 산업 비중이 지속적으로 확장됨에 따라 사용자와 가맹점 파트너들이 국경을 초월한 결제 경험을 주도하게 되기를 바란다.
+                  </sub>
+                </p>
+              </div>
+            </div>
+            <div class="layerBtnBox ml0 layerInner">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="lineVoom">
+                  <img src="../asset/images/common/detail/lineVoom_img.png" alt="LINE Voom" />
+                  <span class="txtBr">
+                    Next<br />
+                    LINE VOOM
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE Pay -->
+
+      <!-- LINE Voom -->
+      <div class="detailPopup layerPopup" id="lineVoomLayer" data-index-number="3" data-item="lineVoom">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>03/30</p>
+              <span></span>
+              <p>line voom</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.voom.title" class="txtBr">재미있는 <br />컨텐츠의 보물창고</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/lineVoom.svg" alt="LINE Voom logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">LINE Plus <br />Product Design 4</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.voom.subdesc">LINE에서만 경험할 수 있는 소셜 서비스를 만들겠다는 목표로 구성원 모두 열정적으로 협업합니다. 디자인, 기획, 개발, QA, 마케팅 모두 아이디어가 많고 가능성이 열려 있기 때문에 서로 의견을 공유하고 설득하는 과정에서 에너지를 느낍니다. 부서마다 각자의 솔루션을 찾아 공유하고, 모두 함께 의사결정을 하는 프로세스로 즐겁게 작업하고 있습니다.</div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/lineVoom_img.png" alt="" />
+              </div>
+            </div>
+            <div class="layerGrid layerInner">
+              <div class="columns w480">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineVoom_img01.png" alt="" />
+                  <span data-i18n="allProduct.voom.col1.sub">공간에 대한 명확한 정체성 찾기</span>
+                  <sub data-i18n="allProduct.voom.col1.txt">LINE VOOM은 틈틈이 자신의 동영상을 올리거나 다양한 장르의 짧은 동영상을 시청하고 즐길 수 있는 동영상 플랫폼이다. 동영상 콘텐츠에 대한 수요가 커지면서 개인의 취미와 기호가 세분되는 가운데 사용자 니즈에 맞춰 2021년 기존의 LINE TIMELINE에서 LINE VOOM으로 새롭게 리뉴얼했다.</sub>
+                  <span data-i18n="allProduct.voom.col2.sub">친구를 연결하는 기존의 LINE TIMELINE</span>
+                  <sub data-i18n="allProduct.voom.col2.txt"
+                    >주요 국가별 사용자들의 소셜 서비스 이용 트렌드를 직접적으로 파악하기 위한 FGI(표적집단면접)를 통해 유용한 부가 기능을 지속적해서 연구, 설계하며 LINE 사용자들이 친구 관계에서 필요로 하는 것들을 적용했다. LINE TIMELINE 활성화를 위해 다른 프로덕트와 연결했는데 그중 하나가 프로필이다. 메신저 챗을 위해 접근하는 사용자의 프로필을 자신의 개성을 표현하는 공간으로 발전시키며 아바타나 테마, 스티커, 한마디와 같은 요소들로 다양하게 표현할 수 있게 했고, 프로필을 업데이트하면 타임라인에
+                    공유되는 방식으로 친구의 소식이 전해지도록 했다. 사용자들이 좋은 반응을 보였던 기능 중 친구 생일축하 기능과 릴레이 글쓰기가 있다. 일본의 오프라인 문화인 졸업, 입학, 퇴사 시 서로 주고받는 롤링페이퍼 문화를 친구 생일 축하에 아날로그 감성룩으로 적용한 기능이다. 재난/재해 상황을 빠르게 알리거나 시즈널 이벤트 등을 쉽게 접할 수 있는 기능도 추가했다.</sub
+                  >
+                  <img src="../asset/images/common/detail/lineVoom_img02.png" alt="" />
+                  <span data-i18n="allProduct.voom.col3.sub">즐거움을 연결하는 LINE VOOM</span>
+                  <sub data-i18n="allProduct.voom.col3.txt"
+                    >LINE TIMELINE에서 LINE VOOM으로 브랜드를 변경하고 서비스 컨셉을 전면 개편해, 재미있는 동영상 콘텐츠를 볼 수 있는 공간으로 크게 탈바꿈시켰다. 주소록 기반의 친구 관계를 팔로우 형태로 전환해 관심사에 따른 페르소나로 활동할 수 있는 기반을 마련하고, 크리에이터들이 다양한 콘텐츠를 생산하고 활동할 수 있도록 열린 생태계를 만들었다. 일반 사용자는 심심할 때 관심있는 콘텐츠를 소비할 수 있는 공간으로, 크리에이터는 자신의 콘텐츠를 담아내고 팬들을 만나는 공간으로, 기업은 보유하고 있는
+                    엔터 콘텐츠들을 활용하는 공간으로 각각 활용할 수 있게 했다. “Video Room”, “Visual Room”, “Boom”을 결합해 동영상을 부담 없이 즐기고 새로운 트렌드와 붐을 창출한다는 의미를 담은 합성어로 LINE VOOM이 탄생했다. Video 감상을 시작할 때 누르는 Play Button과 LINE VOOM의 이니셜 V, 서비스의 핵심 가치인 Connect to Fun이 되는 의미를 서비스 심볼에 표현했다. 재미있는 동영상 콘텐츠들이 활발하게 생산, 소비되는 플랫폼으로써 사용자들이 차별화된 LINE 소셜 서비스의 경험을 확장해 나가길
+                    기대한다.</sub
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="layerBtnBox ml0 layerInner">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="lineNewDesign">
+                  <img src="../asset/images/common/detail/lineNewDesign_img.png" alt="LINE New Design" />
+                  <span class="txtBr">
+                    Next<br />
+                    LINE New Design
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE Voom -->
+
+      <!-- LINE New Design -->
+      <div class="detailPopup layerPopup" id="lineNewDesignLayer" data-index-number="4" data-item="lineNewDesign">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>04/30</p>
+              <span></span>
+              <p>line new design</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.newDesign.title" class="txtBr">정체성을 지키는 <br />과감한 시도</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/lineNewDesign.svg" alt="LINE New Design logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">LINE Plus <br />Product Design 2</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.newDesign.subdesc">
+                  LINE의 전반적인 디자인 변경이다 보니, LINE의 모든 서비스 부서와 커뮤니케이션이 필요했습니다. 홈탭, 챗탭뿐만 아니라 평소에는 커뮤니케이션이 적은 뉴스탭, 월렛탭을 비롯 태국, 대만, 인도네시아 등 글로벌 오피스와도 밀접하게 협업이 이루어졌습니다. 프로젝트를 진행하며 LINE 본체 내 대부분의 서비스 담당자와 만났던 것 같습니다. LINE New Design을 위해 스펙을 공유하고 조율하는 과정이 상당히 복잡하고 힘들었지만 그만큼 좋은 결과가 나타나고 있습니다.
+                </div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/lineNewDesign_img.png" alt="" />
+              </div>
+            </div>
+            <div class="layerGrid layerInner">
+              <div class="columns w480">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineNewDesign_img01.png" alt="" />
+                  <span data-i18n="allProduct.newDesign.col1.sub">LINE의 정체성 반영한 New Design</span>
+                  <sub data-i18n="allProduct.newDesign.col1.txt1"
+                    >LINE 본체에는 스티커, 테마 등 커뮤니케이션을 풍부하게 만들어 주는 기능이 포함된 챗탭 외에도 사용자가 자유롭게 일상이나 관심사를 공유하는 VOOM탭, 실시간으로 다양한 정보를 확인할 수 있는 뉴스탭, 각종 편리한 금융 서비스가 담겨있는 월렛탭 등이 있고 홈탭에서 LINE의 각종 서비스 및 콘텐츠를 확인할 수 있다. 이처럼 LINE 본체는 서비스가 확장되면서 조금씩 디자인을 개선해 왔지만, LINE의 정체성을 지키면서 대대적으로 디자인을 변경하는 LINE New Design은 3년 전부터 시안을 작업하여, 2020년에
+                    본격적으로 프로젝트를 진행하기 시작했다. 이번 작업으로 디자이너들은 디자인 작업뿐만 아니라프로젝트 관리 및 실행 등 평소에 담당하지 않는 업무까지 챙기면서 각자 색다른 경험을 획득하고 있다. LINE New Design 프로젝트는 기능의 업데이트가 아닌 만큼 원래 서비스에서 오래된 디자인 레거시를 제거하며 새롭게 정리하는 것에 집중했다. LINE New Design은 디자인을 변경하면서 LINE의 아이덴티티와 주요 스펙을 유지하기 위해 서비스마다 다양한 의견을 조율하고 설득했다. 새롭게 바뀐 LINE New Design을
+                    통해 사용자들이 다양한 탭을 이용할 때 일관성 있는 LINE 디자인을 체험할 수 있기를 바란다.</sub
+                  >
+                  <span data-i18n="allProduct.newDesign.col2.sub">차별화 포인트</span>
+                  <sub data-i18n="allProduct.newDesign.col2.txt"
+                    >초기 디자인부터 지켜온 LINE 본체 상단의 네이비 컬러를 과감히 제거해, 사용자 입장에서 보는 LINE의 첫인상에 변신을 가했다. LINE이 제공하는 다양한 컨텐츠에 사용자가 집중해주기를 바라는 의미로 색을 최대한 배제하고, 화이트 배경 컨셉을 도입했다. 트렌드에서 벗어난 컬러는 보완하고, 10년 동안 추가된 컴포넌트를 깔끔하게 표현할 수 있도록 정리했다. 2021년 2월부터 실제 시안 및 디자인 테스트를 진행했고 화이트 버전의 디자인 테스트 화면만 200여 장이 넘는다. 시안이 정해진 후 본격적인 개발
+                    전과 릴리즈 직전, 총 2회에 걸쳐 일본, 대만, 태국, 인도네시아, 한국 사용자 300여 명을 대상으로 사용자 리서치를 실시했다. 리서치 참가자들은 새로운 디자인이 이전보다 깔끔하고, 세련되고, 간결해져 텍스트의 가독성이 높아졌다고 평가했다.</sub
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="layerBtnBox ml0 layerInner">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="lineSearch">
+                  <img src="../asset/images/common/detail/lineSearch_img.png" alt="LINE Search" />
+                  <span class="txtBr">
+                    Next<br />
+                    LINE Search
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE New Design -->
+
+      <!-- LINE Search -->
+      <div class="detailPopup layerPopup" id="lineSearchLayer" data-index-number="5" data-item="lineSearch">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>05/30</p>
+              <span></span>
+              <p>line search</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.search.title" class="txtBr">최적화된 <br />검색결과와 내용</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/lineSearch.svg" alt="LINE Search logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">LINE Plus <br />Product Design 3</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.search.subdesc">많은 사용자가 LINE을 사용하다가 정보 검색이 필요할 때 다른 검색 엔진을 사용하는 경우가 많은데 향후에는 LINE 내에서 간편하게 검색할 수 있도록 해 일본 시장에서 LINE Search가 탑티어로 활약할 수 있었으면 좋겠습니다. 9,000만 일본 MAU와의 접점을 이용해 사용자들에게 최적화된 검색 결과와 편리함을 제공하는 서비스로 계속 발전시키고 싶습니다.</div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/lineSearch_img.png" alt="" />
+              </div>
+            </div>
+            <div class="layerGrid layerInner">
+              <div class="columns w480">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineSearch_img01.png" alt="" />
+                  <span data-i18n="allProduct.search.col1.sub">LINE만의 특장점이 담긴 Search</span>
+                  <sub data-i18n="allProduct.search.col1.txt"
+                    >LINE은 2019년 사업 전략 발표회에서 통합 검색 서비스 LINE Search를 선보이며 향후 주력 분야로 정했다. 일본 사용자들이 검색이 필요할 때 가장 빠르고 쉽게 사용할 수 있는 서비스로써 LINE의 새로운 가치로 자리하겠다는 다짐이었다. LINE 앱 내 각 탭의 성격에 맞는 검색 결과를 제공하며, 음성 검색, 대화방 검색, 검색 전문 탭에 이르기까지 제법 큰 규모의 프로젝트이기에 다양한 부서와 폭넓게 협업하고 있으며 야후와의 경영 통합을 계기로 더욱 시너지를 내고 있다.</sub
+                  >
+                  <img src="../asset/images/common/detail/lineSearch_img02.png" alt="" />
+                  <span data-i18n="allProduct.search.col2.sub">사용자 니즈에 최적화</span>
+                  <sub data-i18n="allProduct.search.col2.txt"
+                    >LINE 본체의 탭마다 사용자 니즈에 맞춘 검색 기능을 제공하고, 챗 안에서도 검색 기능이 가능하게 했다. 기존에는 통합 검색 방식으로 사용자에게 정보를 컬렉션별 랭킹으로 제공했으나, 한국의 통합 검색 방식에 익숙하지 않은 일본 유저의 특성을 파악해 웹 문서 형태로 정보를 제공하는 웹 검색 방식을 채택했다. 특히 인물, 영화 등 주제별로 다르게 노출되던 결괏값을 지식베이스라는 템플릿을 만들어 관련 정보를 보기 쉽게 노출함으로써, 언제든지 트렌드를 반영해 빠르게 릴리즈될 수 있도록 구성했다.
+                    템플릿을 통한 일관성 있는 정보 제공은 사용자 입장에서도 몰입도와 만족도를 높일 수 있었다. 늘 사용자의 관점을 최우선 순위에 두고 세세한 기능까지 디자인에 녹여내고자 한다.</sub
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="layerBtnBox ml0 layerInner">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="mission1">
+                  <img src="../asset/images/common/detail/mission01_img.png" alt="mission1" />
+                  <span class="txtBr">
+                    Next<br />
+                    MISSION 01
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE Search -->
+
+      <!-- Mission1 -->
+      <div class="detailPopup layerPopup deTextPopup" id="mission1Layer" data-index-number="6" data-item="mission1">
+        <div class="layerWrap yellow">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>06/30</p>
+              <span></span>
+              <p>CREATIVE MISSION 01</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerTextArea">
+            <div class="layerTextInner">
+              <div class="layerTextBox">
+                <b class="txtBr">
+                  CREATIVE <br />
+                  MISSION
+                  <i>01</i>
+                </b>
+                <p>
+                  Through a systematic design strategy, we create better designs from the user’s point of view and “close the distance” between users and LINE’s services.
+                  <span data-i18n="allProduct.mission1.subdesc">체계적인 디자인 전략을 통해 사용자의 시점에서 보다 좋은 디자인을 만들어내 사용자와 LINE 서비스의 거리를 좁혀 나간다.</span>
+                </p>
+              </div>
+            </div>
+            <div class="layerTextBtnBox">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="lineAvatar">
+                  <img src="../asset/images/common/detail/lineAvatar_img.png" alt="LINE Avatar" />
+                  <span class="txtBr">
+                    Next<br />
+                    LINE Avatar
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mission1 -->
+
+      <!-- LINE Avatar -->
+      <div class="detailPopup layerPopup" id="lineAvatarLayer" data-index-number="7" data-item="lineAvatar">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>07/30</p>
+              <span></span>
+              <p>line avatar</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.avatar.title" class="txtBr">나를 표현하는 <br />새로운 방법</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/lineAvatar.svg" alt="LINE Avatar logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">LINE Plus <br />Multimedia Studio, <br />Product Design 1</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.avatar.subdesc">
+                  처음 아바타 3D 스타일을 잡을 때 다양한 레퍼런스를 찾아보았고 최종적으로는 LINE Avatar만의 개성을 잘 나타내는 스타일로 결정하게 되었습니다. 처음에는 흑백으로 시작했다가 커스터마이징을 위해 컬러를 도입했고, 메신저 앱 내에서 아바타의 움직임이 끊기지 않고 자연스럽게 작동할 수 있도록 최대한 가벼운 구조로 만드는 작업을 진행했습니다. 비주얼적인 부분뿐만 아니라 기획, 개발과도 밀접하게 연계된 부분이 많아 긴밀하게 협업하며 진행하고 있습니다.
+                </div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/lineAvatar_img.png" alt="" />
+              </div>
+            </div>
+            <div class="layerGrid layerInner">
+              <div class="columns w480">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineAvatar_img01.png" alt="" />
+                  <span data-i18n="allProduct.avatar.col1.sub">가상 세계에서의 ‘나’</span>
+                  <sub data-i18n="allProduct.avatar.col1.txt"
+                    >LINE Avatar는 LINE 내에서 ‘나’를 표현하는 새로운 방법으로 메신저, 프로필, 영상통화, 오픈챗 등 다양한 커뮤니케이션에 활용되고 있으며, 2020년 9월, 출시 5일 만에 글로벌 사용자 120만 명을 넘겼고 현재도 계속 발전하고 있다. LINE Avatar는 사진 촬영을 통해 나와 가장 닮은 아바타를 선택한 후 원하는 스타일로 꾸밀 수 있다. 또한 반려동물과 놀거나 재미있는 제스처를 선택할 수 있으며 다양한 이펙트와 조합하며 영상통화도 가능하다. 현재 다양한 콘텐츠 콜라보레이션과 계절별 운영을 실시하고
+                    있으며 친구와 새로운 형태의 커뮤니케이션을 위한 기능들도 늘려나가고 있다.</sub
+                  >
+                  <span data-i18n="allProduct.avatar.col2.sub">아바타가 만드는 또 다른 세상</span>
+                  <sub data-i18n="allProduct.avatar.col2.txt">멀티미디어 콘텐츠인 LINE Avatar는 사용자의 취향을 담거나 감정을 투영한 커뮤니케이션 수단으로써 폭넓게 이용되고 있으며 사용자들이 더욱 자주 활용할 수 있도록 기능을 개선하고 있다. 향후 가상의 공간에서 서로 소식을 전하고, 의상도 입어보며 다른 아바타들과 소통하는 등 아바타가 이뤄내는 특별한 콘텐츠가 많이 생성되는 플랫폼으로 발전하기를 바란다.</sub>
+                  <img src="../asset/images/common/detail/lineAvatar_img02.png" alt="" />
+                  <span data-i18n="allProduct.avatar.col3.sub">직관적인 사용성 제공</span>
+                  <sub data-i18n="allProduct.avatar.col3.txt"
+                    >출시 후 LINE Avatar는 사용자의 니즈를 파악하며 지속적으로 진화하고 있다. 프로젝트를 진행하는 동안 가장 많은 고민을 했던 포인트는 UI를 직관적으로 표현하고, 쉽고 간단한 사용성을 전달하고자 하는 것이었다. 아무리 보기 좋은 아바타를 만든다고 해도 서비스 사용 방법이 어렵다면 사용자들에게 좋지 못한 경험을 제공하기 때문이다. 아바타를 생성한 이후에도 클릭만으로 다양한 헤어스타일과 메이크업, 얼굴형은 물론 눈의 크기까지 미세하게 조정할 수 있게 해 각각의 아이템마다 적용 후에 모습이
+                    어떨지 직관적으로 알 수 있도록 섬네일을 제공했다. 이 과정은 기술적인 요소들을 많이 필요로 했기 때문에 LINE의 프로덕트 디자이너와 기획, 개발 파트는 물론 그래픽 파트까지 끊임없이 논의하며 사용자에게 최적화된 솔루션을 고민했다. 또한 출시 후에도 사용성을 검증하고 개선해나가고 있다.</sub
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="layerBtnBox ml0 layerInner">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="lineCharacter">
+                  <img src="../asset/images/common/detail/lineCharacter_img.png" alt="LINE Character" />
+                  <span class="txtBr">
+                    Next<br />
+                    Character Stickers
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE Avatar -->
+
+      <!-- LINE Character -->
+      <div class="detailPopup layerPopup" id="lineCharacterLayer" data-index-number="8" data-item="lineCharacter">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>08/30</p>
+              <span></span>
+              <p>line Character</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.character.title" class="txtBr">모두에게 사랑받는 <br />LINE 메신저의 <br />핵심 서비스</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/lineCharacter.svg" alt="LINE Character logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">LINE Plus <br />Graphic Studio</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.character.subdesc">직접 디자인한 스티커가 발매되었을 때, 실제로 사용하는 것을 목격했을 때 가장 희열이 큰 것 같습니다. 실제 사용자들의 다운로드와 사용률 데이터, SNS 후기 등 결과물에 대한 긍정적인 피드백을 볼 때 매우 뿌듯합니다.</div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/lineCharacter_img.png" alt="" />
+              </div>
+            </div>
+            <div class="layerGrid layerInner">
+              <div class="columns w2710">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineCharacter_img01.png" alt="" />
+                </p>
+              </div>
+              <div class="columns w480">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineCharacter_img02.png" alt="" />
+                  <span data-i18n="allProduct.character.col1.sub">세계로 나아가는 콘텐츠 스튜디오</span>
+                  <sub data-i18n="allProduct.character.col1.txt"
+                    >IPX(구 LINE FRIENDS)는 다양한 콘텐츠로 새로운 문화를 만드는 글로벌 크리에이티브 스튜디오이다. 그래픽 스튜디오는 IPX의 캐릭터의 IP(지적 소유권)를 활용한 콘텐츠 제작, 새로운 IP 개발, 아바타 서비스에 삽입되는 원화 제작 등 다양한 업무들을 진행 중이다. 2개의 팀으로 구성된 그래픽 스튜디오에서 1팀은 스티커와 테마, 일러스트를 담당하며 2팀은 컨셉아트 기반의 콘텐츠 제작을 담당하고 있다. 각 팀의 업무는 조금씩 다르지만 서로 의견을 교환하면서 유기적으로 작업하는 것을 원칙으로 한다.</sub
+                  >
+                  <span data-i18n="allProduct.character.col2.sub">캐릭터 스티커 제작 프로세스</span>
+                  <sub data-i18n="allProduct.character.col2.txt">스티커 제작에 있어서 초기 아이디어 스케치 단계가 시간도 가장 많이 들고 어렵다. 이미 발매된 스티커가 많다 보니 이전에 사용된 이모션과 차별화된 아이디어를 만들어 내는 것이 쉽지 않은 대목이다. 재미있으면서도 사용성 높은 구성을 위해 전 멤버들이 고군분투 중이다.</sub>
+                  <span data-i18n="allProduct.character.col3.sub">1. 기획</span>
+                  <sub data-i18n="allProduct.character.col3.txt">일본 스티커팀에서 진행될 테마에 대한 기획안을 전달해준다. 기획안이 없는 경우에는 작업자가 요즘 유행하는 스티커 스타일과 매체에서 유행하는 트렌드를 참고해 자유롭게 테마를 선정하고 스케치를 진행한다.</sub>
+                  <span data-i18n="allProduct.character.col4.sub">2. 벡터 작업</span>
+                  <sub data-i18n="allProduct.character.col4.txt">기획안 스케치가 확정되면 벡터 이미지 작업을 진행한다. 먼저 모션별로 대표 컷을 작업 후 애니메이션을 만들기 위해 필요한 캐릭터의 움직이는 동작, 즉 연속 동작을 작업한다.</sub>
+                  <span data-i18n="allProduct.character.col5.sub">3. 모션 작업</span>
+                  <sub data-i18n="allProduct.character.col5.txt">연속 동작을 애니메이션팀에 전달, 모션 작업이 입혀지면 최종 스티커가 완성된다.</sub>
+                  <span data-i18n="allProduct.character.col6.sub">스티커 디자인 주안점 : <br />트렌드 파악, 일관된 세계관, 포용성 강조</span>
+                  <sub data-i18n="allProduct.character.col6.txt"
+                    >스티커 업무에서 선행될 부분이 바로 트렌드 파악이다. 스티커 전송 수가 높은 일본 현지에서 화제 되는 트렌드를 자주 들여다본다. 평소에도 각종 SNS나 국내외 커뮤니티에서 핫한 트렌드와 밈들을 수집하고 친구나 동물의 행동 등 일상 생활에서 재미있는 동작이나 요소를 발견할 때 메모해 두기도 한다. 캐릭터의 세계관과 이미지를 일관되게 유지하는 것도 중요하다. 부정적인 표현들보다 긍정적이고 귀여워 보일 수 있는 표현을 더 많이 사용하고, LINE FRIENDS 친구들의 고유 성격이 스티커로 잘 돋보일 수
+                    있도록 이모션 구성에 공을 들이는 중이다. 글로벌 다수 사용자가 스티커를 사용하기 때문에 특정 문화나 카테고리에 속하는 사람들이 반감을 느낄 수 있는 표현을 지양한다. 각 나라의 문화에 대해 항상 공부하고 있다.</sub
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="layerBtnBox ml0 layerInner">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="lineSeedSans">
+                  <img src="../asset/images/common/detail/lineSeedSans_img.png" alt="LINE Seed Sans" />
+                  <span class="txtBr">
+                    Next<br />
+                    LINE Seed Sans
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE Character -->
+
+      <!-- LINE Seed Sans -->
+      <div class="detailPopup layerPopup" id="lineSeedSansLayer" data-index-number="9" data-item="lineSeedSans">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>09/30</p>
+              <span></span>
+              <p>line Seed Sans</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.seed.title" class="txtBr">전용 폰트는 <br />기업의 목소리</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/lineSeedSans.svg" alt="LINE Seed Sans logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">LINE Plus <br />BX Design</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.seed.subdesc">
+                  LINE은 기존에도 볼테(Volte)나 나눔스퀘어와 같이 직각으로 네모에 꽉 차 있는 것처럼 보이거나 통통해 보이는 지오메트릭 계열 폰트를 주로 사용했습니다. 메신저 서비스를 토대로 다양한 패밀리 브랜드를 가진 메인 브랜드로 성장한 지금 LINE은 기존의 지오매트릭으로 계열을 유지하면서 특유의 개성을 덧붙인 LINE Seed 폰트를 만들게 되었습니다. 전용 폰트가 있어서 편리하고, 자부심을 느낀다는 사용자들의 긍정적인 피드백을 접할 때 우리 자신도 LINE Seed 폰트에 대한 만족도가 제고되는 걸 느낍니다.
+                </div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/lineSeedSans_img.png" alt="" />
+              </div>
+            </div>
+            <div class="layerGrid layerInner">
+              <div class="columns w480">
+                <p>
+                  <img class="mt0 mb4" src="../asset/images/common/detail/lineSeedSans_img01.png" alt="" />
+                  <b data-i18n="allProduct.seed.col1.head">LINE Seed 폰트는 LINE의 모든 서비스에 각각 심어져 싹을 틔우고 열매를 맺어 사용자와 함께 성장한다. </b>
+                  <span data-i18n="allProduct.seed.col1.sub">로고는 기업의 얼굴, 전용 폰트는 기업의 목소리</span>
+                  <sub data-i18n="allProduct.seed.col1.txt"
+                    >이미지가 중심인 ‘로고’가 기업의 얼굴이라면 텍스트로 표현되는 슬로건 등에 사용하는 ‘폰트’는 기업의 목소리라고 할 수 있다. LINE 초창기에는 LINE FRIENDS(현 IPX)와 함께 동글동글한 느낌의 개성이 강한 폰트를 사용했다. LINE FRIENDS 분사 후 코어 타깃이 글로벌 전역으로 확대됨에 따라, LINE만의 아이덴티티를 잘 나타낼 수 있는 전용 폰트가 필요했다. 이에 LINE은 글로벌 네트워크에서 범용적으로 사용할 수 있는 LINE Seed 폰트의 영문 버전을 시작으로 언어별 폰트를 만들고 있는데 가급적 많은
+                    사람이 사용할 수 있고 LINE의 특징이 듬뿍 담긴 서체를 표방하고 있다.</sub
+                  >
+                  <span data-i18n="allProduct.seed.col2.sub">‘달튼막’과의 성공적인 콜라보</span>
+                  <sub data-i18n="allProduct.seed.col2.txt"
+                    >LINE Seed 폰트의 성공요인 중 하나는 ‘달튼막’을 제작사로선정한 것이다. 폰트 제작 경험이 많은 회사였지만 단순히 LINE의 입장을 구현해주는 데 그치거나 기술력으로만 어필하지 않고 서로 의견을 나누며 LINE이 원하는 방향과 디테일까지 최대한 반영한 결과물을 도출할 수 있었다. LINE의 정수를 뽑아내는 워크숍 과정이 인상적이었는데 어떤 카테고리에 속하는 회사인지 좌표에 점을 찍고 원을 늘려가면서 LINE이 가진 원칙, 철학, 가치관 등을 도식화해 폰트에 반영했다. 언어마다 특수문자의 표기나
+                    공간감이 조금씩 다르다는 것도 새롭게 알게 되었다. LINE 내부 멤버로서가 아닌 외부에서의 관점에 대한 이해를 높이고, 글로벌을 향해 시야를 넓힌 계기가 되었다. LINE만의 개성 표현 LINE Seed 폰트는 LINE의 보편적이면서도 친근하며, 작은 위트를 담은 브랜드 아이덴티티를 표현한다. LINE Seed 폰트를 자세히 살펴보면 ‘f ’자나 ‘c’ 자가 평소 보던 폰트보다 기울기에 차이를 느낄 수 있다. 각각의 알파벳을 따로 떼어놓고 보면 자칫 과해 보일 수 있으나, 실제 다른 알파벳들과 함께 사용될 때에는
+                    자연스럽게 어우러지는 기울기인데, 이는 LINE이라는 회사가 가진 위트 있는 매력을 표현한 것이다. 서비스와 함께 점점 자라나는 LINE Seed 폰트 LINE Seed에는 LINE의 모든 서비스에 각각 심어져 싹을 틔우고 열매를 맺어 사용자와 함께 성장한다는 의미가 내포되어 있는 것처럼 LINE Seed 폰트는 디자인 프로그램뿐 아니라 MS Office와 같은 문서 편집 프로그램 및 앱 & 웹용으로도 개발되어 필요한 곳에 적합한 파일로 설치해 사용할 수 있다. LINE Seed 폰트는 세리프(글씨에서 획의 시작이나 끝부분에 있는
+                    작은 돌출선)가 없는 고딕 계열의 폰트로 LINE 아이콘의 코너가 둥근 특성을 반영해 영어, 한글, 숫자, 기호 등 모든 텍스트에 공통적인 아이덴티티로 적용되어 있다. LINE Seed 폰트는 언어 제한 없이 동일한 DNA를 가지고 있으며 언어를 변환하더라도 같은 느낌을 줄 수 있도록 개발했다. 무게중심과 볼륨을 영문과 하나의 문자처럼 보일 수 있도록 맞추어, 함께 쓰일 때에도 별도의 조정없이 사용이 가능하다.</sub
+                  >
+                </p>
+              </div>
+              <div class="columns w480">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineSeedSans_img02.png" alt="" />
+                  <span data-i18n="allProduct.seed.col3.sub">Font family</span>
+                  <sub data-i18n="allProduct.seed.col3.txt">LINE Seed Sans는 Thin / Regular / Bold / ExtraBold / Heavy로 총 다섯 단계의 weight로 구성되어 있다. 다양한 weight의 구성은 본문과 타이틀을 구별하기에 유용하며 가독성을 높여준다.</sub>
+                </p>
+              </div>
+              <div class="columns w480">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineSeedSans_img03.png" alt="" />
+                  <span data-i18n="allProduct.seed.col4.sub">Icons</span>
+                  <sub class="pb2" data-i18n="allProduct.seed.col4.txt">LINE Seed Sans에는 LINE의 다양한 아이콘이 포함되어 있다. 아이콘은 LINE의 다양한 서비스를 직관적이고 간결하게 전달하며, 정보 전달에 시각적 주목도를 높여준다.</sub>
+                  <img src="../asset/images/common/detail/lineSeedSans_img04.png" alt="" />
+                  <span data-i18n="allProduct.seed.col5.sub">Ligature</span>
+                  <sub data-i18n="allProduct.seed.col5.txt">LINE Seed Sans에는 Ligature라는 기능이 구현되어 있어 특정 문자(fi, ff, fl, fj 등)의 연속 배열 시, 문자가 가독성에 도움을 주는 형태로 다음과 같이 변형된다.</sub>
+                </p>
+              </div>
+              <div class="columns w1680">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineSeedSans_img05.png" alt="" />
+                </p>
+              </div>
+              <div class="columns w480">
+                <p>
+                  <span class="mt0" data-i18n="allProduct.seed.col6.sub">LINE만의 개성 표현</span>
+                  <sub data-i18n="allProduct.seed.col6.txt">LINE Seed 폰트는 LINE의 보편적이면서도 친근하며, 작은 위트를 담은 브랜드 아이덴티티를 표현한다. LINE Seed 폰트를 자세히 살펴보면 ‘f ’자나 ‘c’ 자가 평소 보던 폰트보다 기울기에 차이를 느낄 수 있다. 각각의 알파벳을 따로 떼어놓고 보면 자칫 과해 보일 수 있으나, 실제 다른 알파벳들과 함께 사용될 때에는 자연스럽게 어우러지는 기울기인데, 이는 LINE이라는 회사가 가진 위트 있는 매력을 표현한 것이다.</sub>
+                  <span data-i18n="allProduct.seed.col7.sub">서비스와 함께 점점 자라나는 LINE Seed 폰트</span>
+                  <sub data-i18n="allProduct.seed.col7.txt"
+                    >LINE Seed에는 LINE의 모든 서비스에 각각 심어져 싹을 틔우고 열매를 맺어 사용자와 함께 성장한다는 의미가 내포되어 있는 것처럼 LINE Seed 폰트는 디자인 프로그램뿐 아니라 MS Office와 같은 문서 편집 프로그램 및 앱 & 웹용으로도 개발되어 필요한 곳에 적합한 파일로 설치해 사용할 수 있다. LINE Seed 폰트는 세리프(글씨에서 획의 시작이나 끝부분에 있는 작은 돌출선)가 없는 고딕 계열의 폰트로 LINE 아이콘의 코너가 둥근 특성을 반영해 영어, 한글, 숫자, 기호 등 모든 텍스트에 공통적인
+                    아이덴티티로 적용되어 있다. LINE Seed 폰트는 언어 제한 없이 동일한 DNA를 가지고 있으며 언어를 변환하더라도 같은 느낌을 줄 수 있도록 개발했다. 무게중심과 볼륨을 영문과 하나의 문자처럼 보일 수 있도록 맞추어, 함께 쓰일 때에도 별도의 조정없이 사용이 가능하다.</sub
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="layerBtnBox ml0 layerInner">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="lineDesignSystem">
+                  <img src="../asset/images/common/detail/lineDesignSystem_img.png" alt="LINE Design System" />
+                  <span class="txtBr">
+                    Next<br />
+                    LINE Design System
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE Seed Sans -->
+
+      <!-- LINE Design System -->
+      <div class="detailPopup layerPopup" id="lineDesignSystemLayer" data-index-number="10" data-item="lineDesignSystem">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>10/30</p>
+              <span></span>
+              <p>line Design System</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.designSystem.title" class="txtBr">일관성 있는 <br />글로벌 <br />브랜드 경험</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/lineDesignSystem.svg" alt="LINE Design System logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">LINE Plus <br />Product Design 1, 3</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.designSystem.subdesc">
+                  LINE Design System이 공개된 이후 내부 리포트에 따르면 전반적으로 디자인의 퀄리티가 제고되는 느낌이 듭니다. LINE Design System에서 중요하게 생각하는 세 가지는 ‘굿디자인’, ‘능률성’, ‘높은 기준(High Standard)’인데 우리는 글로벌 회사이므로 ‘높은 기준’을 가장 중요하게 생각합니다. 이전에는 국가별로 디자인 톤 앤드 매너가 다르고 디자인의 스타일이나 결과물에서 편차가 있다고 느낀 적이 많았는데 LINE Design System으로 수준이 높아졌고 좋은 결과물로 연결되는 것 같습니다.
+                </div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/lineDesignSystem_img.png" alt="" />
+              </div>
+            </div>
+            <div class="layerGrid layerInner">
+              <div class="columns w480">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineDesignSystem_img01.png" alt="" />
+                  <span data-i18n="allProduct.designSystem.col1.sub">LINE의 퀄리티와 일관성 제고</span>
+                  <sub data-i18n="allProduct.designSystem.col1.txt"
+                    >글로벌 사용자들이 LINE 앱의 많은 기능들을 더 쉽게 사용할 수 있도록 LINE은 디자인 원칙과 가치를 통일하기 위한 시스템을 개발하는 일에 착수했다. 이는 컬러 정비와 폰트의 가독성, 그리고 콘텐츠에 집중할 수 있는 디자인으로 집중되었다. LINE Design System은 LINE 내부의 많은 프로덕트 디자이너가 사용할 수 있도록 LINE 디자인 전반을 구성하는 Components, Interaction, UX의 통합 가이드라인을 효율성, 높은 기준, 좋은 디자인에 목표로 두고 풀어나갔다. 드디어 2021년 11월, LINE은 디자인의 기본이
+                    되는 LINE Design Principle(LINE 디자인 원칙)을 선언하고, 디자이너가 실무에 바로 사용할 수 있는 Foundation Guideline, Components Library 그리고 UX Guideline으로 이루어진 LINE Design System(https://designsystem.line.me)을 오픈했다.</sub
+                  >
+                </p>
+              </div>
+              <div class="columns w1045">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineDesignSystem_img02.png" alt="" />
+                  <span data-i18n="allProduct.designSystem.col2.sub">Icon Guideline</span>
+                  <sub data-i18n="allProduct.designSystem.col2.txt">LINE의 아이콘은 사용자에게 아이디어 및 오브젝트를 전달하는 가장 효율적인 도구입니다. LINE 서비스에서 사용되는 아이콘의 적용 및 제작 가이드라인을 확인할 수 있습니다.</sub>
+                </p>
+              </div>
+              <div class="columns w480">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineDesignSystem_img03.png" alt="" />
+                  <span data-i18n="allProduct.designSystem.col3.sub">Grid</span>
+                  <sub data-i18n="allProduct.designSystem.col3.txt">Grid는 24x24px을 기본으로 하며, 크기 및 목적에 따라 조정될 수 있습니다. Grid에는 상하좌우 2px의 Padding이 포함됩니다. 아이콘은 padding을 제외한 영역 안에 그리도록 합니다.</sub>
+                </p>
+              </div>
+              <div class="columns w480">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineDesignSystem_img04.png" alt="" />
+                  <span data-i18n="allProduct.designSystem.col4.sub">Stroke</span>
+                  <sub data-i18n="allProduct.designSystem.col4.txt">기본 Stroke는 1.3pt이며 아이콘의 크기, 위치 및 목적에 따라 변경될 수 있습니다. Stroke의 outline이 픽셀에 물리도록 제작하는 것을 권장합니다.</sub>
+                </p>
+              </div>
+              <div class="columns w480">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineDesignSystem_img05.png" alt="" />
+                  <span data-i18n="allProduct.designSystem.col5.sub">일관성 있는 브랜드 경험 제공</span>
+                  <sub data-i18n="allProduct.designSystem.col5.txt"
+                    >LINE Design System을 만드는 데 있어서 사용자의 패턴과 기대 수준을 바탕으로 대화 경험 안에서 새로운 기능을 추가하고, 전 연령대를 고려한 직관적이고 익숙한 디자인을 채택했다. 이를 바탕으로 다양한 프로토타입을 만들고 테스트하면서 사용자가 자연스럽게 적응할 수 있게 했다. 이에 따라 LINE Design System은 표준화된 컬러, 아이콘, 그래픽 등 Design Foundation을 만들었고 현재 일관성 있는 브랜드 경험을 제공하는 데 필수적인 역할을 담당하고 있다.</sub
+                  >
+                  <span data-i18n="allProduct.designSystem.col6.sub">디자인 시스템 오픈 긍정 사례</span>
+                  <sub data-i18n="allProduct.designSystem.col6.txt"
+                    >LINE 내부의 디자인 시스템을 외부로 오픈한다는 것이 큰 도전이었기에 LINE Design System팀과 각국의 프로덕트 디자이너는 2년 반 동안 끊임없는 리서치와 고민과 협업을 이어나갔다. 이를 통해 LINE Design Principle 선언과 함께 LINE Design System의 탄생이라는 값진 결과를 성취하게 되었다. 국내에서 디자인 시스템 자체를 외부에 오픈한 사례는 흔하지 않지만 디자인 시스템 분야를 선도하는 기회로 삼고자 한다. 또한 글로벌 LINE 디자이너들이 사용하게 되는 LINE Design System을 통해 어떤 새로운
+                    경험을 그려낼지 기대된다. 앞으로 LINE Design System은 인터랙션 디자인 가이드라인 제작, 웹 컴포넌트 제공, Design System Application 업데이트 등 기획, 개발을 아우르는 모두를 위한 시스템으로 확장될 것이다.</sub
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="layerBtnBox ml0 layerInner">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="lineBank">
+                  <img src="../asset/images/common/detail/lineBank_img.png" alt="LINE Bank" />
+                  <span class="txtBr">
+                    Next<br />
+                    LINE Bank
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE Design System -->
+
+      <!-- LINE Bank -->
+      <div class="detailPopup layerPopup" id="lineBankLayer" data-index-number="11" data-item="lineBank">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>11/30</p>
+              <span></span>
+              <p>line Bank</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.bank.title" class="txtBr">내 손안의 <br />은행서비스</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/lineBank.svg" alt="LINE Bank logo" />
+                  </div>
+                  <div class="layerMainHistory" data-i18n="allProduct.bank.history">
+                    <p class="txtBr">굿디자인 어워드 2021 <br />본상 수상</p>
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">LINE Plus BX Design, <br />LINE BIZ PLUS Biz UI</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.bank.subdesc">2021년 LINE Bank는 세계 4대 디자인 어워드 중 하나인 굿디자인 어워드에서 본상을 받았습니다. 심플하면서도 확장성이 있는 디자인을 통해 모바일 뱅킹 플랫폼의 가능성을 확장했고 다양한 연령의 사용자들이 쉽게 사용할 수 있도록 직관적이고 이해하기 쉬운 아이콘을 기획, 디자인했다는 점에서 좋은 평가를 받았습니다.</div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/lineBank_img.png" alt="" />
+              </div>
+            </div>
+            <div class="layerGrid layerInner">
+              <div class="columns w480">
+                <p>
+                  <span class="mt0" data-i18n="allProduct.bank.col1.sub">국가별 상황에 맞춘 LINE Bank (LINE BK)</span>
+                  <sub data-i18n="allProduct.bank.col1.txt"
+                    >코로나로 인해 생활 방식, 일하는 방식뿐 아니라, 돈을 취급하는 방식까지도 디지털 중심으로 변화했다. LINE은 이러한 트렌드에 걸맞게 모바일 뱅킹 서비스를 론칭해 고객의 니즈를 반영했다. 2020년 10월 첫 모바일 뱅킹 서비스인 태국 ‘LINE BK’가 정식 출범한 데 이어, 2021년에는 대만과 인도네시아에서도 LINE Bank가 그랜드 오픈했다. ‘내 손안의 금융’이라는 슬로건 아래 글로벌 LINE 이용자들에게 LINE 앱 하나만으로 광범위한 통합 금융 솔루션을 경험할 수 있게 했다. 상대의 은행 계좌번호나 전화번호가
+                    없어도 LINE 친구에게 송금이 가능한 기능을 기본으로 예·적금, 대출, 카드, 보험 등을 서비스하며 출범 2년 만에, 2021년 12월 기준 LINE Bank는 글로벌 사용자 수 480만 명을 달성했다.</sub
+                  >
+                  <span data-i18n="allProduct.bank.col2.sub">서비스의 안정화와 다양화, 고객 경험 개선까지</span>
+                  <sub data-i18n="allProduct.bank.col2.txt1"
+                    >LINE Bank는 첫 UI 테스트를 시작하고 릴리즈까지 2년이 넘게 걸렸다. 다양한 선행 테스트를 비롯 무수히 많은 변형과 재시도에 따라 걸린 시간이었다. 자주 사용하는 은행 서비스라 할지라도 막상 새로운 기능을 도입하면 프로세스가 낯설기 마련이어서 최대한 쉽게 이해할 수 있는 UX를 고민했다. LINE BIZ UI 디자인팀은 사업팀 및 UX 담당자와 계속 의견을 교환하며 최종 결과물을 서비스할 수 있었다. LINE Bank 오픈 시에는 뱅킹 서비스의 안정화와 다양화에 집중했다면, 지금은 서</sub
+                  >
+                </p>
+              </div>
+              <div class="columns w1115">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineBank_img01.png" alt="" />
+                </p>
+              </div>
+              <div class="columns w480">
+                <p>
+                  <sub data-i18n="allProduct.bank.col2.txt2">비스의 질을 더욱 향상해 고객 경험을 개선하는 데 초점을 맞추고 있다.</sub>
+                  <span data-i18n="allProduct.bank.col3.sub">LINE Bank (태국)</span>
+                  <sub data-i18n="allProduct.bank.col3.txt"
+                    >LINE BK는 LINE의 첫 뱅킹 서비스이자 태국 내 첫 ‘소셜 뱅킹(메신저 연계형 모바일 뱅킹)’ 플랫폼으로 2020년 10월 LINE 앱의 Wallet Tab 아래에 LINE BK를 론칭했다. 태국 사용자는 별도의 앱을 설치하지 않고도 LINE BK에 가입하고 최대 5개의 저축 계좌를 개설하고 직불카드를 신청할 수 있다. 또 계좌 저축을 위해 고금리를 제공하고 프리랜서와 고정 수입이 없는 개인들을 위한 개인 대출을 포함한 다양한 은행 서비스를 제공하고 있다. LINE BK는 LINE 자회사 LINE Financial Plus와 태국 카시콘 은행 자회사
+                    KASIKORN Vision Company 합작법인인 카시콘 라인(KASIKORN LINE)이 운영하며 출범 4개월 만에 200만 명을 돌파하고 LINE BK를 통해 총 210억 태국 밧(한화 약 7,800억 원) 이상의 금융 거래가 이루어지는 등 예상을 뛰어넘는 성과를 이뤄냈고 2022년 2월 기준으로 총고객 수 400만 명을 달성했다.</sub
+                  >
+                  <span data-i18n="allProduct.bank.col4.sub">LINE Bank (대만)</span>
+                  <sub data-i18n="allProduct.bank.col4.txt1"
+                    >2021년 4월 대만에서 LINE의 두 번째 뱅킹 서비스를 론칭했다. 출범 일주일 만에 고객 수가 앞서 출시된 경쟁 서비스를 추월했고 두 달 만에 개설 계좌를 15만 개를 돌파하는 등 LINE 메신저 사용 고객이 많은 대만에서 고객 기반을 빠르게 확대했다. 또한, 대만 금융 업계 최초로 상대의 은행 계좌번호 또는 휴대폰 번호를 알지 못해도 LINE 친구에게 송금이 가능한 기능을 제공해 서비스를 확대하면서 경쟁력을 더욱 높였다. 2022년 1월 기준 누적 고객 80만 명을 돌파하는 등 성공적으로 대만 금융 시장을
+                    공략했다.</sub
+                  >
+                  <span data-i18n="allProduct.bank.col5.sub">LINE Bank (인도네시아)</span>
+                  <sub data-i18n="allProduct.bank.col5.txt1"
+                    >인도네시아 LINE Bank는 LINE이 세 번째로 론칭한 디지털 뱅킹 플랫폼이다. LINE의 금융 자회사 LINE Financial Plus와 하나금융 자회사 하나은행의 인도네시아 법인의 합작으로 탄생했고 2018년부터 각 사의 금융 인력, 플랫폼 인력, 디지털 인력으로 전담 부서를 구축하고 서비스 출시를 준비해왔다. MZ세대 고객에게 집중해 빠르고 편리한 비대면 실명 확인과 계좌개설 프로세스, 심플하면서도 차별화된 UI/UX, 그리고 송금 수수료 면제로 MZ세대의 니즈를 충족시켰다. MZ세대 사이에서 LINE 캐릭터가 들어간
+                    직불카드 언박싱(unboxing) 영상이 소셜미디어 ‘틱톡’ 앱을 통해 자생적으로 홍보되었고 브라운 캐릭터가 사용된 직불카드 경우는 일시적으로 재고 부족 현상을 겪을 정도로 흥행을 이뤄냈다. 2021년 12월 기준 고객 30만 명을 돌파했고 앞으로도 다양하고 편리한 서비스를 앞세워 고객 만족을 제고하고자 한다.</sub
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="layerBtnBox ml0 layerInner">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="lineDemaecan">
+                  <img src="../asset/images/common/detail/lineDemaecan_img.png" alt="LINE Demaecan" />
+                  <span class="txtBr">
+                    Next<br />
+                    Demaecan
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE Bank -->
+
+      <!-- LINE Demaecan -->
+      <div class="detailPopup layerPopup" id="lineDemaecanLayer" data-index-number="12" data-item="lineDemaecan">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>12/30</p>
+              <span></span>
+              <p>Demaecan</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.demaecan.title" class="txtBr">브랜딩 <br />업그레이드의 <br />정석</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/demaecan.svg" alt="LINE Demaecan logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">LINE Plus BX Design</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.demaecan.subdesc">
+                  데마에칸 서비스의 현황을 파악하며 일본과 한국에서 동시에 디자인을 진행했습니다. 기존 데마에칸이 가진 브랜드 에센스를 어디까지 유지하고 변경해야 할지 검토하고 급진적 방안, 중도적 방안, 기존의 브랜딩을 유지하는 방안으로 제안했습니다. 데마에칸과 협의 후 중도적 방안이 채택되었고, 배달 서비스의 정체성을 접시 모티프의 로고와 컬러, 역동적인 제스쳐의 ‘Taro 군’ 심볼에 담아 서비스의 신속성을 강조하고 확실한 브랜드 이미지를 구축하고자 했습니다.
+                </div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/lineDemaecan_img.png" alt="" />
+              </div>
+            </div>
+            <div class="layerGrid layerInner">
+              <div class="columns w480">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineDemaecan_img01.png" alt="" />
+                  <span data-i18n="allProduct.demaecan.col1.sub">강력한 브랜드를 구축하고자 <br />전반적 리브랜딩 리뉴얼 작업 진행</span>
+                  <sub data-i18n="allProduct.demaecan.col1.txt"
+                    >데마에칸(出前館)은 음식 배달 서비스로 일본에서 주목받는 서비스 중 하나다. 일본 배달 시장을 이끌고 있으며 1999년 설립돼 2000년 일본 기업 최초로 인터넷 배달 주문을 시작했다. LINE 사용자들은 데마에칸 앱을 통해 레스토랑에 주문하고 배달 받는데 코로나로 인해 언택트로 외부의 음식을 주문하는 수요가 늘어남에 따라 데마에칸 사용자도 늘어나고 있다. LINE은 데마에칸을 인수하면서 더 새롭고 강력한 브랜드를 구축하고자 전반적인 리브랜딩 작업을 진행했다. 변화하는 비대면 시장에서 친근감,
+                    신뢰감, 일상화라는 서비스 가치와 경험을 담고자 했다. 한국 BX팀이 최초 리브랜딩을 진행했으며 브랜드 가이드라인을 데마에칸 디자인팀에 전달하면서 지속해서 디자인을 유지 보수할 수 있도록 도왔다.</sub
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="layerBtnBox ml0 layerInner">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="mission2">
+                  <img src="../asset/images/common/detail/mission02_img.png" alt="mission2" />
+                  <span class="txtBr">
+                    Next<br />
+                    MISSION 02
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE Demaecan -->
+
+      <!-- Mission2 -->
+      <div class="detailPopup layerPopup deTextPopup" id="mission2Layer" data-index-number="13" data-item="mission2">
+        <div class="layerWrap yellow">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>13/30</p>
+              <span></span>
+              <p>CREATIVE MISSION 02</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerTextArea">
+            <div class="layerTextInner">
+              <div class="layerTextBox">
+                <b class="txtBr">
+                  CREATIVE <br />
+                  MISSION
+                  <i>02</i>
+                </b>
+                <p>
+                  We provide solutions to resolve the pain points of users, not just beautiful designs, as we aim to be the global design standard.
+                  <span data-i18n="allProduct.mission2.subdesc">단순히 아름다운 디자인이 아닌 사용자의 Pain Point를 해결하는 솔루션을 제공하고 디자인의 글로벌한 기준을 새롭게 정의해간다.</span>
+                </p>
+              </div>
+            </div>
+            <div class="layerTextBtnBox">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="lineDoctor">
+                  <img src="../asset/images/common/detail/lineDoctor_img.png" alt="LINE Doctor" />
+                  <span class="txtBr">
+                    Next<br />
+                    LINE Doctor
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mission2 -->
+
+      <!-- LINE Doctor -->
+      <div class="detailPopup layerPopup" id="lineDoctorLayer" data-index-number="14" data-item="lineDoctor">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>14/30</p>
+              <span></span>
+              <p>line Doctor</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.doctor.title" class="txtBr">차세대 <br />진료 시스템의 <br />대안</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/lineDoctor.svg" alt="LINE Doctor logo" />
+                  </div>
+                  <div class="layerMainHistory" data-i18n="allProduct.doctor.history">
+                    <p class="txtBr">굿디자인 어워드 2021 <br />본상 수상</p>
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">LINE Corp. <br />BX Design, <br />LINE Corp. <br />Product Design1</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.doctor.subdesc">병원을 이용하는 모든 연령층이 직관적으로 인식할 수 있도록 아이콘을 비주얼로 보여주고자 했습니다. 많은 고민 끝에 병원에 관련된 아이콘을 의료 상자 느낌으로 가기로 최종 결정했고 의료 상자 안에는 초록 십자 마크를 넣어 LINE의 병원 서비스라는 느낌을 추가했습니다. 또한 의사 가운을 입은 LINE Doctor 캐릭터를 통해 모든 사용자에게 친근함을 제공하고자 했습니다.</div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/lineDoctor_img.png " alt="" />
+              </div>
+            </div>
+            <div class="layerGrid layerInner">
+              <div class="columns w480">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineDoctor_img01.png" alt="" />
+                  <span data-i18n="allProduct.doctor.col1.sub">차세대 진료 시스템의 대안</span>
+                  <sub data-i18n="allProduct.doctor.col1.txt"
+                    >2020년 4월, 일본 정부는 코로나 감염이 증가함에 따라 원격의료를 일시적으로 허가하는 통지를 발표했다. LINE Doctor는 LINE 앱에서 환자가 진료 예약, 무료 영상통화로 의사와 진료, 진료비 결제까지 모두 원스톱으로 할 수 있는 서비스다. 즉 LINE 사용자는 별도의 앱을 다운로드할 필요 없이 (특정 조건이 충족될 경우) 아플 때 의사와 연결할 수 있다. 코로나로 병원 가기도 어렵고 꺼리는 환경에서 새로운 의료 시스템을 제안했다는 점에서 시사하는 바가 크다.</sub
+                  >
+                  <span data-i18n="allProduct.doctor.col2.sub">더욱 친근하게 심플한 디자인으로 진화 중</span>
+                  <sub data-i18n="allProduct.doctor.col2.txt1">의사 코스튬을 장착한 LINE FRIENDS 캐릭터를 전용 캐릭터로 제작해 의료 서비스에 친근감을 주고 고객에게 LINE Doctor가 의료 서비스라는 것을 직관적으로 알 수 있게 했다.</sub>
+                </p>
+              </div>
+              <div class="columns w480">
+                <p>
+                  <img class="mt0 mb4" src="../asset/images/common/detail/lineDoctor_img02.png" alt="" />
+                  <sub data-i18n="allProduct.doctor.col2.txt2">전용 캐릭터는 온오프라인 배너, 스타트 키트, 아이들을 상대로 나눠줄 수 있는 스티커 세트 등에 사용되고 있다. 한편 UI 디자인은 사용하는 연령층을 고려해 글자를 크게 키웠으며 복잡한 구조 대신 편리하고 심플한 구조를 채택했다. 헷갈릴 수 있는 단계에서는 명확한 안내 UI를 추가하는 등 보다 친절한 서비스로 개선 중이다.</sub>
+                  <span data-i18n="allProduct.doctor.col3.sub">굿디자인, 모두가 즐겨 사용하는 서비스</span>
+                  <sub data-i18n="allProduct.doctor.col3.txt"
+                    >2021년 10월 20일, 원격 의료 서비스 LINE Doctor가 2021 굿 디자인 어워드를 수상했다. 온라인 진료 후 필요시 대면 진료로 연계되는 점, LINE 앱 내에서 예약에서 진찰, 처방전 발행까지 한 번에 가능하다는 점에서 좋은 평가를 받았다. 특별히 어워드는 스타터 (Starter) 키트에 주목했는데, 원격 의료 초진 환자들에게 LINE Doctor를 설명하고 사용법을 안내할 수 있는 도구로서 환자가 예약할 때 사용할 수 있는 포스터, POP 디스플레이, 스티커, 사용자 가이드 및 병원 카드 등 사용자의 편리성을 제고하는
+                    아이템이 포함돼 있다.</sub
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="layerBtnBox ml0 layerInner">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="lineMan">
+                  <img src="../asset/images/common/detail/lineMan_img.png" alt="line Man" />
+                  <span class="txtBr">
+                    Next<br />
+                    LINE MAN
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE Doctor -->
+
+      <!-- LINE Man -->
+      <div class="detailPopup layerPopup" id="lineManLayer" data-index-number="15" data-item="lineMan">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>15/30</p>
+              <span></span>
+              <p>line Man</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.man.title" class="txtBr">태국 LINE <br />최초의 오리지널 <br />서비스</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/lineMan.svg" alt="LINE Man logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">LINE Company <br />Thailand BX Design</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.man.subdesc">LINE MAN을 론칭할 때가 가장 기억에 남습니다. 다른 나라에는 없는 태국만의 현지 독자 서비스라는 자부심을 가지고 태국 사용자들을 만났습니다. 태국 사용자들의 생생한 피드백도 바로 들을 수 있는 만큼 긴장도 많이 했습니다. 서비스가 성공적으로 론칭하고 태국 사용자들에게 사랑받아 지금까지 성장할 수 있게 돼 매우 자랑스럽습니다.</div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/lineMan_img.png " alt="" />
+              </div>
+            </div>
+            <div class="layerGrid layerInner">
+              <div class="columns w480">
+                <p>
+                  <span class="mt0" data-i18n="allProduct.man.col1.sub">태국 사용자들의 니즈를 반영한 서비스 </span>
+                  <sub data-i18n="allProduct.man.col1.txt"
+                    >LINE MAN Wongnai는 2016년부터 현재(2021년 3월)까지 590만 MAU를 보유한 태국 시장에서 가장 빠르게 성장하고 있는 주문형 배달 플랫폼 서비스로 음식 배달, 메신저, 택시, 마트 등으로 폭넓게 확장되고 있다. 태국 내 모든 지역을 대상으로 더 많은 고객에게 편리함을 제공하고 있으며 코로나로 인한 배달 이용자들의 급증에 따라 고군분투하는 현지 식당들에 힘을 실어주고 동시에 일자리 창출에도 큰 역할을 담당하고 있다. 태국 사람들에게 가장 인기 있는 배달 애플리케이션으로서 2020년에는 더 맛있지만
+                    저렴한 음식 배달을 위해 여러 레스토랑이 함께 일할 수 있는 '클라우드 키친'을 선보였다. LINE 생태계의 강점을 활용해 LINE MAN 앱을 켜지 않고도 LINE 앱 내에서 원스톱으로 음식을 주문, 배달하는 LINE MAN 미니 앱을 만들기도 했다.</sub
+                  >
+                  <span data-i18n="allProduct.man.col2.sub">자체 디자인팀을 통해 고객화에 집중</span>
+                  <sub data-i18n="allProduct.man.col2.txt"
+                    >LINE MAN Wongnai는 '태국 사람들이 더 잘 살 수 있도록 돕자'는 사명 아래 소비자들의 요구에 신속하고 정확한 대응, 다양한 선택지와 저렴한 가격의 음식 배달을 강조하며 태국 최고의 혁신적인 서비스 플랫폼을 지향하고 있다. 다른 LINE 서비스와 통일감을 주기 위해 글로벌 브랜드 가이드라인을 토대로 전반적인 디자인을 진행한 후 태국 BX팀이 현지화된 디테일을 반영해 발전시켰다. 급속 성장에 맞추어 사용자 경험 개선을 위해 업데이트가 꾸준히 이루어지고 있으며 현재는 LINE MAN Wongnai의 자체
+                    디자인팀에서 작업하고 있다.
+                  </sub>
+                  <img src="../asset/images/common/detail/lineMan_img01.png" alt="" />
+                </p>
+              </div>
+            </div>
+            <div class="layerBtnBox ml0 layerInner">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="mission3">
+                  <img src="../asset/images/common/detail/mission03_img.png" alt="mission3" />
+                  <span class="txtBr">
+                    Next<br />
+                    MISSION 03
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE Man -->
+
+      <!-- Mission3 -->
+      <div class="detailPopup layerPopup deTextPopup" id="mission3Layer" data-index-number="16" data-item="mission3">
+        <div class="layerWrap yellow">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>16/30</p>
+              <span></span>
+              <p>CREATIVE MISSION 03</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerTextArea">
+            <div class="layerTextInner">
+              <div class="layerTextBox">
+                <b class="txtBr">
+                  CREATIVE <br />
+                  MISSION
+                  <i>03</i>
+                </b>
+                <p>
+                  With professionalism, we provide the necessary design solutions for our users in advance.
+                  <span data-i18n="allProduct.mission3.subdesc">전문성을 가지고 주도적으로 필요한 디자인 솔루션을 제공한다.</span>
+                </p>
+              </div>
+            </div>
+            <div class="layerTextBtnBox">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="lineTheme">
+                  <img src="../asset/images/common/detail/lineTheme_img.png" alt="LINE Theme" />
+                  <span class="txtBr">
+                    Next<br />
+                    Color Theme
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mission3 -->
+
+      <!-- LINE Theme -->
+      <div class="detailPopup layerPopup" id="lineThemeLayer" data-index-number="17" data-item="lineTheme">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>17/30</p>
+              <span></span>
+              <p>Color Theme</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.fukuoka.title" class="txtBr">지속적인 성장과 <br />오너쉽의 확장</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/lineTheme.svg" alt="Color Theme logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">LINE Fukuoka Corp. <br />Creative</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.fukuoka.subdesc">
+                  LINE Fukuoka 디자인실은 오너십을 가지고 지속적으로 성장하고 있다. 초기에는 도쿄 본사의 요청에 따라 간단한 배너나 일러스트 위탁 업무를 담당했지만, 스티커 업무 등의 범위를 확대하고 신규 UI 디자인을 제작하는 등 일본 내 제2의 거점으로 발전하고 있다. 컬러 테마는 LINE Fukuoka 솔루션 팀의 아이디어로 시작된 프로덕트로, 심플하게 컬러만으로 라인 앱 내 화면을 장식하는 기능이다. 6가지 색상을 설정하는 것으로 디자인뿐만 아니라 검수 및 튜닝, 코딩 과정이 기존 테마에 비해 매우 간단하다. 캐릭터
+                  없이도 심미적으로 훌륭한 효과를 내고, 테마 매출 상위 랭킹에 들어갈 정도로 인기가 있다.
+                </div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/lineTheme_img.png " alt="" />
+              </div>
+            </div>
+            <div class="layerBtnBox layerInner ml4">
+              <div class="layerBtn bd0">
+                <a href="javascript:;" data-item="lineRamadan">
+                  <img src="../asset/images/common/detail/lineRamadan_img.png" alt="line Ramadan" />
+                  <span class="txtBr">
+                    Next<br />
+                    LINE Ramadan
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE Theme -->
+
+      <!-- LINE Ramadan -->
+      <div class="detailPopup layerPopup" id="lineRamadanLayer" data-index-number="18" data-item="lineRamadan">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>18/30</p>
+              <span></span>
+              <p>line Ramadan</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.ramadan.title" class="txtBr">라마단에 대한 <br />모든 아이디어</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/lineRamadan.svg" alt="line Ramadan logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">PT. LINE PLUS <br />INDONESIA BX Design</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.ramadan.subdesc">라마단은 한 달 동안 이어지는 인도네시아의 가장 중요한 종교 행사인데 LINE Ramadan은 이 기간 동안 인도네시아에서 제공되는 현지화된 서비스입니다. 동일한 목표를 가진 다양한 부서들과 함께 일할 수 있어서 좋았으며 프로젝트 기간 동안 다양한 대화를 나누고 아이디어를 공유하면서 생각하지 못했던 통찰력과 아이디어를 얻었습니다. 앞으로도 지속적으로 발전하는 서비스가 되기를 바랍니다.</div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/lineRamadan_img.png " alt="" />
+              </div>
+            </div>
+            <div class="layerGrid layerInner">
+              <div class="columns w480">
+                <p>
+                  <span class="mt0" data-i18n="allProduct.ramadan.col1.sub">라마단 경험을 디자인하다</span>
+                  <sub data-i18n="allProduct.ramadan.col1.txt"
+                    >LINE Ramadan은 라마단 시즌 동안 무슬림 사용자들에게 라마단 경험을 서비스하고 사용자들의 종교적 활동을 지원하는 인도네시아 한정 서비스다. 무슬림 사용자들에게 유용한 기도 알림, 기도 일정, 기도 노트 등 다양한 기능을 제공하며, 라마단 관련 경품 퀴즈, 일일 콘텐츠 등 사용자들을 위한 재미 요소도 제공한다. LINE Ramadan 경험을 지속적으로 발전하기 위해 인도네시아 BX팀은 라마단 관련 콘텐츠를 많이 접하며 라마단과 관련된 무슬림 아트워크, 그래픽, 캘리그라피 레퍼런스를 모으고 작업에
+                    반영하고 있다.</sub
+                  >
+                  <span data-i18n="allProduct.ramadan.col2.sub">‘올해의 테마’ 중심의 디자인 통일성</span>
+                  <sub data-i18n="allProduct.ramadan.col2.txt"
+                    >LINE Ramadan은 매년 ‘올해의 테마’를 정하고 그에 따라 콘텐츠와 디자인을 만든다. ‘올해의 테마’는 인도네시아 BX팀과 마케팅이 함께 정하는데 다양한 아이디어를 자유롭게 브레인스토밍하고 그 중 실현 가능성이 있는 빅 아이디어를 선택한다. 또 ‘올해의 테마’를 어떤 기능으로, 어떤 정보로 제공할지 논의한 후 키 비주얼 작업과 콘텐츠와 관련된 여러 가지 디자인물을 작업한다. LINE Ramadan은 인도네시아의 가장 큰 행사를 담음에 있어 철저한 사전 준비는 물론 라마단 기간 내 변경되는 사항 등까지도
+                    기민하게 반영하고 업데이트하고 있다.</sub
+                  >
+                </p>
+              </div>
+              <div class="columns w620">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineRamadan_img01.png" alt="" />
+                </p>
+              </div>
+            </div>
+            <div class="layerBtnBox ml0 layerInner">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="linePenghuFestival">
+                  <img src="../asset/images/common/detail/linePenghuFestival_img.png" alt="line Penghu Festival" />
+                  <span class="txtBr">
+                    Next<br />
+                    TAIWAN<br />
+                    PENGHU FESTIVAL
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE Ramadan -->
+
+      <!-- LINE Penghu Festival -->
+      <div class="detailPopup layerPopup" id="linePenghuFestivalLayer" data-index-number="19" data-item="linePenghuFestival">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>19/30</p>
+              <span></span>
+              <p>line TAIWAN PENGHU FESTIVAL</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.TWPenghu.title" class="txtBr">문제를 <br />해결하는 디자인</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/linePenghuFestival.svg" alt="line Penghu Festival logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">LINE Taiwan Limited <br />BX Design</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.TWPenghu.subdesc">
+                  펭후 페스티벌을 준비하면서 현지 사용자들에게 친근감을 주고 페스티벌의 재미 요소를 강화하고자 LINE FRIENDS 캐릭터를 사용했습니다. LINE Friends의 ‘브라운’과 ‘코니’에게 펭후 지역에서만 볼 수 있는 지역 꽃 패턴을 활용한 코스튬을 입히고, 캐릭터를 남용하지 않으면서도 꼭 필요한 곳에 배치하기 위해 여러 번 테스트 과정을 거쳤습니다. 대만의 정서를 느낄 수 있도록 캐릭터와 함께 대만 야시장의 디테일을 살려 홍보물을 제작하기도 했는데 사용자들에게 좋은 반응을 끌어냈던 기억이 납니다.
+                </div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/linePenghuFestival_img.png  " alt="" />
+              </div>
+            </div>
+            <div class="layerGrid layerInner">
+              <div class="columns w480">
+                <p>
+                  <span class="mt0" data-i18n="allProduct.TWPenghu.col1.sub">페스티벌 속 LINE 보물찾기</span>
+                  <sub data-i18n="allProduct.TWPenghu.col1.txt"
+                    >펭후 페스티벌은 매년 대만 정부에서 지역 관광 활성화를 위해 주최하는 불꽃놀이 이벤트다. 최근에는 다양한 IP를 초청해 콜라보로 진행하는데 2021에는 LINE이 IP로 참여하게 되었다. 2021년은 LINE 창립 10주년이기도 해서 CSR 이념에 맞게 지역단체와의 상호 성장을 목표로 진행했다. 펭후 페스티벌의 메인이벤트는 관광객이 방문하는 곳곳마다 공식 계정에 접속하고 베네핏을 획득하는 일종의 보물찾기 게임이었다. 게임 시작 전 펭후 공식계정과 친구를 맺으면, 각각의 미션 장소에 도달할 때마다
+                    비콘(Beacon, 위치 기반 자동 알림 서비스)이 나타나고, 공식계정으로부터 메시지를 받게 된다. 미션 수행을 마친 사용자는 LINE MUSIC의 시리얼 코드, LINE GIFTSHOP 쿠폰 등 다양한 LINE 서비스 혜택을 받았다. 원래 페스티벌 기간은 4월 22일부터 6월 28일까지였으나, 코로나로 인해 5월 14일까지만 진행했음에도 총 14만 명의 관광객이 참여해 그중 42,417명이 이번 이벤트에 참가하는 큰 성과를 획득했다. 이벤트에 참여한 사용자들은 LINE과 정부가 협업한 것에 대한 노력을 치하하고, 기간이 예상보다 짧아
+                    아쉬움도 컸지만 감동은 특별했다고 평가했다.</sub
+                  >
+                  <span data-i18n="allProduct.TWPenghu.col2.sub">현장 중심의 디자인 솔루션</span>
+                  <sub data-i18n="allProduct.TWPenghu.col2.txt"
+                    >대만 BX팀은 먼저 야외에서 진행되는 페스티벌인 점을 감안해 현장 답사를 통해 이벤트 장소를 선정하기로 했다. 야외 비콘설치물이 지형이나 날씨 등의 조건에 잘 버티면서도 관광객의 동선이 가장 자연스럽게 최적화되는 위치를 살폈다. 몇몇 로컬 상점들의 위치가 관광객 동선 밖에 위치해 있어 관계자들과의 의견을 절충하는 과정을 거쳤는데 디자인팀은 실제 공간에 어떻게 반영하게 되는지 디자인 도면으로 시뮬레이션하면서 설득했다. 그밖에 LINE 내부적으로도 사업, 마케팅 등 다양한 부서와 협업 과정에서
+                    타 부서의 의견을 적절히 반영하면서도 디자인 관점을 유지하기 위해 적극적으로 제안하고 논의한 결과 서로 만족할 만한 결과를 얻을 수 있었다.</sub
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="layerBtnBox ml0 layerInner">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="mission4">
+                  <img src="../asset/images/common/detail/mission04_img.png" alt="mission4" />
+                  <span class="txtBr">
+                    Next<br />
+                    MISSION 04
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE Penghu Festival -->
+
+      <!-- Mission4 -->
+      <div class="detailPopup layerPopup deTextPopup" id="mission4Layer" data-index-number="20" data-item="mission4">
+        <div class="layerWrap yellow">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>20/30</p>
+              <span></span>
+              <p>CREATIVE MISSION 04</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerTextArea">
+            <div class="layerTextInner">
+              <div class="layerTextBox">
+                <b class="txtBr">
+                  CREATIVE <br />
+                  MISSION
+                  <i>04</i>
+                </b>
+                <p>
+                  We understand the service and business environment, aiming for design that evolves in response to change.
+                  <span data-i18n="allProduct.mission4.subdesc">서비스와 사업 환경을 이해하고 변화에 맞추어 진화하는 디자인을 추구한다.</span>
+                </p>
+              </div>
+            </div>
+            <div class="layerTextBtnBox">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="lineCall">
+                  <img src="../asset/images/common/detail/lineCall_img.png" alt="LINE Call" />
+                  <span class="txtBr">
+                    Next<br />
+                    LINE CALL
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mission4 -->
+
+      <!-- LINE Call -->
+      <div class="detailPopup layerPopup" id="lineCallLayer" data-index-number="21" data-item="lineCall">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>21/30</p>
+              <span></span>
+              <p>line Call</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.call.title" class="txtBr">통화 기능을 넘어 <br />진화하는 <br />VoIP 플랫폼</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/lineCall.svg" alt="line Call logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">
+                  LINE Plus <br />
+                  Product Design 1
+                </div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.call.subdesc">
+                  LINE CALL 서비스는 디바이스나 연령 구분 없이 많은 사용자가 활발하게 사용하는 서비스로 1:1 음성 통화, 1:1 영상 통화, 그룹 음성통화, 그룹 영상통화까지 다양한 형태로 제공되며, 서로 얽혀있는 기능들이 많아 디자인할 때 고려해야 할 부분이 많습니다. 디자인을 진행할 때 다양한 방향의 테스트를 통해 최적의 사용성을 제공하고자 노력하고 있습니다. 통화 서비스를 진행하는 담당자 모두 서비스에 대한 애정이 높아 제시된 안의 장단점을 치밀하게 논의하며 서비스를 더 좋은 방향으로 발전시켜 나가고
+                  있습니다.
+                </div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/lineCall_img.png" alt="" />
+              </div>
+            </div>
+            <div class="layerGrid layerInner">
+              <div class="columns w480">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineCall_img01.png" alt="" />
+                  <span data-i18n="allProduct.call.col1.sub">글로벌 사용자를 고려한 다양한 콜 서비스</span>
+                  <sub data-i18n="allProduct.call.col1.txt"
+                    >LINE은 언제, 어디서나 메시지와 영상통화, 음성통화를 무료로 즐길 수 있다. 1:1통화, 그룹통화, OA통화, 미팅 등 다양한 통화 서비스와 콘텐츠를 제공하는 LINE의 통화 서비스는 코로나가 급격히 유행했던 2020년 초부터 크게 사용량이 늘며 사람과 사람을 잇는 원거리 커뮤니케이션 플랫폼으로서 톡톡히 기능하였다. 2021년 1:1통화 개편 이후 2022년 그룹통화를 새롭게 개편하면서 LINE CALL의 다양한 통화 기능들이 더욱 고도화되고 있다. 다양한 국가의 사용자들이 이전보다 기능을 더 명확하게 이해하며,
+                    즐겁고 편리하게 사용할 수 있는 서비스를 만드는 것이 이번 개편의 핵심이다.</sub
+                  >
+                  <span data-i18n="allProduct.call.col2.sub">사용자의 니즈를 세심하게 반영한 기능 확장</span>
+                  <sub data-i18n="allProduct.call.col2.txt"
+                    >코로나가 지속되면서 1:1 통화량이 급격하게 증가함에 따라 LINE CALL은 단순한 통화에서 벗어나 친구들과 소통하고, 회사 동료와 회의하고, 운동 코치에게 강습받는 등 활용 범위가 점차 확대되고 있다. 이러한 사용자 니즈에 부응하기 위해 지속적으로 사용자 테스트를 통해 사용자의 니즈에 맞추어 기능을 최적화하고 있다. 사용자 테스트에서 여성은 영상통화 중 이펙트, 필터 등 얼굴을 꾸미는 것을 중요하게 생각한다는 것을 알 수 있었다. 젊은 사용자들은 메뉴를 많이 눌러보고 활발하게 탐색하는 반면,
+                    연령대가 높아질수록 실수가 염려돼 메뉴를 잘 누르지 않고 통화에만 집중하는 경향이 있었다. LINE CALL은 이처럼 다양한 성별, 연령대에 따른 사용자의 니즈를 세심하게 디자인에 반영해 단순한 통화 서비스에 머무르지 않고 다각도로 기능을 확장, 구현하고 있다.</sub
+                  >
+                  <span data-i18n="allProduct.call.col3.sub">사용 맥락에 따라 진화하는 개인 및 그룹 통화 디자인</span>
+                  <sub data-i18n="allProduct.call.col3.txt"
+                    >영상으로 통화할 때 다양한 배경이나 필터 효과를 쓰고 싶다는 사용자 목소리에 따라 ‘Background'와 ‘Avatar Effect’ 그리고 Background Avatar Effect Sticker 기능을 추가했다. 분위기 있는 장소로 카메라의 배경을 변경하거나, 본인의 표정까지 그대로 따라 하는 아바타 캐릭터를 나 대신 세워둘 수도 있다. 또 대화방에서 사용하던 스티커를 통화 중에도 사용할 수 있다. 그룹 통화에서 확장된 형태인 LINE Meeting은 최대 500명까지 그룹별로 스마트폰과 데스크톱을 통해 참여할 수 있으며, 독특한 배경, 필터
+                    및 얼굴 효과를 제공해 사용자가 자기 얼굴과 배경에 다양한 효과를 입혀 볼 수 있도록 했다. 또한 PIP(Picture-In-Picture) 기능을 통해 미팅 중에도 LINE 대화방 확인이 가능하다. 안전한 사용자 환경을 위해 32자 이상의 LINE Meeting URL을 생성해 링크가 있는 사람만 폐쇄적으로 참여가 가능하며, 초대받지 않은 게스트가 참여하더라도 ‘삭제’ 기능으로 제거할 수 있다. 이는 그룹 통화에 대한 관심과 요구가 높아지는 상황에서 사용자의 pain point를 찾아 솔루션을 디자인에 반영한 사례라고 할 수 있다.</sub
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="layerBtnBox ml0 layerInner">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="lineBT21">
+                  <img src="../asset/images/common/detail/lineBT21_img.png" alt="line BT21" />
+                  <span class="txtBr">
+                    Next<br />
+                    BT21 Videos
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE Call -->
+
+      <!-- LINE BT21 -->
+      <div class="detailPopup layerPopup" id="lineBT21Layer" data-index-number="22" data-item="lineBT21">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>22/30</p>
+              <span></span>
+              <p>line BT21 Videos</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.bts21.title" class="txtBr">BTS의 <br />세계관이 스며들다</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/lineBT21.svg" alt="line BT21 logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">LINE Plus <br />Multimedia Studio</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.bts21.subdesc">BT21 영상을 만들고 YouTube에 게시하면 시청자의 즉각적인 피드백을 보게 됩니다. 시청자들이 우리 콘텐츠를 지속적으로 보고, 즐기며 때로는 번뜩이는 아이디어를 줄 때 가장 큰 힘이 됩니다. 앞으로도 휘발성 콘텐츠보다는 오래 남고 여운이 있는 콘텐츠를 제작하고 싶은 욕심이 있습니다.</div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/lineBT21_img.png" alt="" />
+              </div>
+            </div>
+            <div class="layerGrid layerInner">
+              <div class="columns w480">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineBT21_img01.png" alt="" />
+                  <span data-i18n="allProduct.bts21.col1.sub">BT21과 함께하는 일상</span>
+                  <sub data-i18n="allProduct.bts21.col1.txt1"
+                    >BT21은 2017년 10월에 BTS와 콜라보해 만들어진 IPX (구LINE FRIENDS)의 인기 캐릭터로, 유니스타즈라는 글로벌 팬클럽이 존재할 정도로 전 세계적인 사랑을 받고 있다. 콘텐츠가 주로 게시되는 유튜브의 BT21 채널의 경우, 2022년 2월 기준으로 491만 명의 구독자를 보유하고, 총 조회수는 3억 회를 돌파했으며 영상 중 가장 높은 조회수는 2,033만 회에 달한다. BT21 캐릭터들을 활용해 제작하는 영상은 크게 두 종류인데 BTS와의 캐릭터 콜라보 제작 과정 중에 언급된 작은 요소나 특징에서 출발해 이야기를 만든
+                    오리지널 스토리 시리즈(코어 콘텐츠)가 있고, BT21 캐릭터가 생소한 일반 사용자도 즐길 수 있는 먹방, ASMR 등 소셜 미디어의 트렌드를 반영한 인플루언서 콘텐츠가 있다. 2021년 하반기부터는 BT21 캐릭터들이 유튜브 채널을 운영하는 설정으로 직접 라이브를 진행하는 등 보다 다양한 콘텐츠를 제작하고 있다.</sub
+                  >
+                  <span data-i18n="allProduct.bts21.col2.sub">Making Story</span>
+                  <sub data-i18n="allProduct.bts21.col2.txt"
+                    >한 달에 한 번 업로드 되는 BT21 채널의 코어 콘텐츠인 오리지널 스토리 시리즈는 피디와 감독이 소재 선정, 스크립트 및 보드 작업을 진행하고 아트팀, 애니메이션팀, 사운드팀, 미디어디자인팀의 작업으로 이어진다. 콘텐츠가 완성되면 업로드 전후로 홍보용 사전 콘텐츠를 제작하고 스케줄에 맞춰 영상을 업로드한다. 기획 단계를 포함해 코어 콘텐츠 하나를 제작하는데 대략 두 달 정도가 소요되는데 평균 200만 뷰를 기록하고 있는 인기 시리즈이다. 2021년 하반기부터 새로 시작한 라이브 콘텐츠는 언리얼
+                    엔진을 활용, 캐릭터가 직접 팬들과 소통하는 실시간 방송으로, 라이브를 진행한 해당 캐릭터가 SNS 실시간 트렌드에 오르는 등 큰 반향을 일으키고 있다. 유연한 파이프라인과 전문가들로 구성된 제작팀이 있어 변화하는 트렌드를 반영한 다채로운 기획을 시도를 할 수 있으며, 콘텐츠 제작 스펙트럼이 넓고 로드맵이 잘 갖춰져 있어 언제나 최고의 결과물을 기대할 수 있다.</sub
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="layerBtnBox ml0 layerInner">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="lineNews">
+                  <img src="../asset/images/common/detail/lineNews_img.png" alt="line News" />
+                  <span class="txtBr">
+                    Next<br />
+                    LINE NEWS
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE BT21 -->
+
+      <!-- LINE News -->
+      <div class="detailPopup layerPopup" id="lineNewsLayer" data-index-number="23" data-item="lineNews">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>23/30</p>
+              <span></span>
+              <p>line News</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.news.title" class="txtBr">사용자를 위한 <br />뉴스 디자인</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/lineNews.svg" alt="line News logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">LINE Corp. Portal & <br />Search Company <br />Design</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.news.subdesc">
+                  LINE 포털 & 서치 컴퍼니 디자인팀에서는 LINE 앱 뉴스탭의 전반적인 디자인을 진행하고 있다. 뉴스탭은 LINE 사용자들이 앱 내에서 다양한 장르의 뉴스를 확인, 검색하는 영역이다. 전반적인 LINE 뉴스탭, 광고, 코로나탭, 올림픽 관련 뉴스 영역에 대해 디자인을 진행하였고, 사용자가 보기 편한 환경을 위해 새롭게 다크모드를 적용했다. LINE 포털 & 서치 컴퍼니 디자인팀은 매우 주도적으로 의견을 제안한다. 디자인의 개선안은 데이터 근거를 포함하며 디자인 시안의 작은 부분이나 표현 방법 (예를 들어 특정
+                  버튼을 넣을 것인지 등)까지 제안한다. 또 LINE 뉴스의 페르소나와 연계해 디자인을 설명하고 UI적인 관점에서 디자인의 근거를 마련한다.
+                </div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/lineNews_img.png" alt="" />
+              </div>
+            </div>
+            <div class="layerBtnBox layerInner ml4">
+              <div class="layerBtn bd0">
+                <a href="javascript:;" data-item="lineBiz">
+                  <img src="../asset/images/common/detail/lineBiz_img.png" alt="line Biz" />
+                  <span class="txtBr">
+                    Next<br />
+                    LINE Biz Partner<br />
+                    Award
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE News -->
+
+      <!-- LINE Biz -->
+      <div class="detailPopup layerPopup" id="lineBizLayer" data-index-number="24" data-item="lineBiz">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>24/30</p>
+              <span></span>
+              <p>LINE Biz Partner Award</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.biz.title" class="txtBr">함께 <br />성장하는 기회</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/lineBiz.svg" alt="line Biz logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">LINE Corp. BX Design</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.biz.subdesc">LINE의 B2B 광고 프로덕트는 광고주가 직접 LINE에 의뢰하는 것이 아니라 파트너를 통해 어떤 광고 매체가 가장 효과적일지 검토 후 결정하는 방식으로 판매되고 있습니다. 우리는 이벤트의 키 비주얼, 로고, 트로피, 스테이지와 함께 파트너로서 승인을 의미하는 배지 디자인을 담당했습니다.</div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/lineBiz_img.png" alt="" />
+              </div>
+            </div>
+            <div class="layerGrid layerInner">
+              <div class="columns w480">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineBiz_img01.png" alt="" />
+                  <span data-i18n="allProduct.biz.col1.sub">LINE과 파트너 기업을 연결, 확장되는 의미를 담다</span>
+                  <sub data-i18n="allProduct.biz.col1.txt"
+                    >LINE Biz Partner Award는 파트너의 모티베이션 제고를 위해 매년 진행하는 이벤트다. 일반적인 LINE의 이벤트 디자인 작업은 로고 또는 키 비주얼을 작업하고 그 외 물품을 후속으로 작업하는 것인데 비해 LINE Biz Partner Award는 가장 노출도가 높은 배지 디자인을 먼저 작업한 후 로고와 키 비주얼을 작업하는 순서로 진행되었다. 배지의 경우, LINE의 파트너임을 나타내는 용도로 파트너 기업의 명함 등 다양한 곳에 활용이 되는 만큼 규격에 제한이 많은 편이다. LINE과 파트너가 연결되고 사업이 확장되는
+                    이미지를 1cm의 작은 정사각형에서 인식시키기 위해 두 개의 정사각형이 연결되는 심플하고 명확한 디자인을 채택했다. 키 비주얼과 트로피 작업에도 두 개의 사각형 엘레멘트를 그대로 사용하며 그러데이션 컬러를 넣어 확장의 느낌을 표현했다. 실물 트로피의 제작 시에는 다이아몬드에서 나오는 다채로운 색상을 표현하고자 홀로그램 시트를 사용하는 등 여러 차례 테스트를 거쳐 작업을 완성했다.</sub
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="layerBtnBox ml0 layerInner">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="mission5">
+                  <img src="../asset/images/common/detail/mission05_img.png" alt="mission5" />
+                  <span class="txtBr">
+                    Next<br />
+                    MISSION 05
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE Biz -->
+
+      <!-- Mission5 -->
+      <div class="detailPopup layerPopup deTextPopup" id="mission5Layer" data-index-number="25" data-item="mission5">
+        <div class="layerWrap yellow">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>25/30</p>
+              <span></span>
+              <p>CREATIVE MISSION 05</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerTextArea">
+            <div class="layerTextInner">
+              <div class="layerTextBox">
+                <b class="txtBr">
+                  CREATIVE <br />
+                  MISSION
+                  <i>05</i>
+                </b>
+                <p>
+                  We continue to challenge to pursue better designs.
+                  <span data-i18n="allProduct.mission5.subdesc">끊임없이 도전해 더 나은 디자인을 추구한다.</span>
+                </p>
+              </div>
+            </div>
+            <div class="layerTextBtnBox">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="lineBlockchain">
+                  <img src="../asset/images/common/detail/lineBlockchain_img.png" alt="LINE Blockchain" />
+                  <span class="txtBr">
+                    Next<br />
+                    LINE Blockchain
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mission5 -->
+
+      <!-- LINE blockchain -->
+      <div class="detailPopup layerPopup" id="lineBlockchainLayer" data-index-number="26" data-item="lineBlockchain">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>26/30</p>
+              <span></span>
+              <p>LINE Blockchain</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.blockChain.title" class="txtBr">초보자도 쉽게, <br />모두를 위한 디자인</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/lineBlockchain.svg" alt="line Blockchain logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">LINE BIZ PLUS Biz UI</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.blockChain.subdesc">
+                  LINK 공식 웹사이트 구축을 위해 Blockchain의 어원에서 비롯된 키워드인 '연결'을 활용했습니다. 어떻게 하면 '연결'을 잘 표현할 수 있을지에 대해 중점을 두고 고민하면서 팀원과 함께 '연결'에 관한 다양한 그래픽 표현 방법과 메타포를 찾아보면서 디자인 스타일 테스트를 다양하게 진행해 보았습니다. 여러 종류의 테스트 방향 중 원형을 활용하기로 정했고 여기에 별도의 컷 신을 제작한 후 인터랙션 효과도 추가해 '연결'을 보다 더 효율적으로 표현했습니다.
+                </div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/lineBlockchain_img.png" alt="" />
+              </div>
+            </div>
+            <div class="layerGrid layerInner">
+              <div class="columns w480">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineBlockchain_img01.png" alt="" />
+                  <span data-i18n="allProduct.blockChain.col1.sub">사용자의 기여로 창출되는 가치를 LINE 생태계와 공유</span>
+                  <sub data-i18n="allProduct.blockChain.col1.txt"
+                    >LINE은 단순한 채팅 앱을 넘어 사용자에게 언제 어디서나 필요한 정보, 서비스, 브랜드와 연결하며 다양한 서비스를 제공하는 스마트 포털로 진화하고 있다. 스마트 포털은 핀테크 세계로 확장되며 은행, 증권 및 결제 분야의 발전에 도움이 되는 혁신적인 새로운 서비스를 출시하고 있다. 나아가 블록체인 기술을 LINE 플랫폼에 접목함으로써 사용자들의 기여로 창출되는 가치를 LINE 생태계의 참여자들과 공유하는 중이다. LINE Blockchain의 독자 메인넷과 함께 OPEN API를 제공하는 개발 플랫폼, LINE 메신저
+                    계정과 연계된 월렛 서비스(현재는 일본 내 서비스만 제공)를 함께 제공해 개발 편의성과 사용자 경험을 반영했다. LINE Blockchain 네트워크는 범용 암호자산인 'LINK'를 사용자들이 일상 생활에서 안전하게 보관하고 편리하게 접근하며 안전하게 거래하는 것을 돕는다. LINE은 LINK를 중심으로 누구나 편리하고 안전하게 LINE의 서비스를 이용할 수 있는 서비스 중심의 블록체인 생태계 안에서 사용자와 함께 성장하고 있다. 사용자는 LINK를 거래소에서 구입하거나 인센티브로 받아 결제 또는 교환할 수 있는데
+                    LINE 생태계에서 컨텐츠, 커머스, 소셜, 게임, 교환 등에서 사용이 가능하다. LINE은 일본향 LINE NFT 마켓과 글로벌향 DOSI 마켓 베타 버전 오픈 등 LINE Blockchain과 암호화폐 자산 기반의 다양한 서비스를 속속 선보이고 있으며, 이에 더해 LINK는 일본에서 LINE 스코어, LINE 증권 등 LINE의 서비스와 통합되고 있다.</sub
+                  >
+                  <span data-i18n="allProduct.blockChain.col2.sub">사용자 친화적인 일러스트 활용, 친근한 UX디자인</span>
+                  <sub data-i18n="allProduct.blockChain.col2.txt">LINE은 지속적이고 성공적인 UX 디자인 경험을 통해 LINE Blockchain UX에도 풍부하고 실용적인 노하우를 전수했다. LINE Blockchain UX는 사용자를 우선시해 기술에 능통한 사람과 초보자 모두가 똑같이 접근하기 쉬운 서비스를 만드는 것을 핵심으로 한다. 어렵고 복잡한 개념과 내용을 쉽게 전달하기 위해 쉽게 풀어냈으며 사용자 친화적인 일러스트를 사용하고 정보를 정확하게 전달하기 위해 인포그래픽을 적극적으로 활용했다.</sub>
+                </p>
+              </div>
+            </div>
+            <div class="layerBtnBox ml0 layerInner">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="lineNewsAwards">
+                  <img src="../asset/images/common/detail/lineNewsAwards_img.png" alt="line News Awards" />
+                  <span class="txtBr">
+                    Next<br />
+                    LINE NEWS AWARDS
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE blockchain -->
+
+      <!-- LINE News Awards -->
+      <div class="detailPopup layerPopup" id="lineNewsAwardsLayer" data-index-number="27" data-item="lineNewsAwards">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>27/30</p>
+              <span></span>
+              <p>LINE News Awards</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.awards.title" class="txtBr">연결의 힘</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/lineNewsAwards.svg" alt="line News Awards logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">LINE Corp. BX Design, <br />LINE Corp. Multimedia <br />Design</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.awards.subdesc">2020 NEWS AWARDS는 모션이 유독 돋보였는데 처음 기획 단계에서부터 영상 쪽에 비중을 두어 초기 디자인부터 모션을 생각하고 진행했기에, 좀 더 재미있는 결과물이 나올 수 있었습니다. 각각의 세션마다 등장하는 7초짜리 범퍼 영상에 주제와 매칭되는 의미를 부여해서, 모션 키워드를 직·간접적으로 엿보는 재미가 있었습니다.</div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/lineNewsAwards_img.png" alt="" />
+              </div>
+            </div>
+            <div class="layerGrid layerInner">
+              <div class="columns w480">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineNewsAwards_img01.png" alt="" />
+                  <span data-i18n="allProduct.awards.col1.sub">영상이 강조된 LINE NEWS AWARDS 2020</span>
+                  <sub data-i18n="allProduct.awards.col1.txt">LINE NEWS AWARDS는 1년 동안 LINE NEWS가 다뤘던 것을 종합 평가하며 언론, 연예인, 문화, 스포츠 등 각 부문을 시상하는 이벤트다. 2020년 뉴스 어워드의 키워드는 ‘연결(쯔나가리)’이었는데, 미디어와 인플루언서(수상자)와 사용자들의 연결뿐만 아니라, 뉴스 내의 크고 작은 이벤트들이 연결되어 새로운 2021년을 만들자는 의미를 디자인에 담았다.</sub>
+                  <span data-i18n="allProduct.awards.col2.sub">모티브 ‘N’</span>
+                  <sub data-i18n="allProduct.awards.col2.txt"
+                    >여러 번의 아이디어 논의 끝에 ‘NEWS’의 ‘N’에 ‘연결’되는 키 비주얼을 모티브로 활용했고, 특히 영상에서 N의 모티브가 활발하게 사용되었다. 작은 점들이 퍼지고 합쳐지고 태엽처럼 서로 유기적으로 영향을 주며 결국에는 N자 모양으로 트리밍된다. 작게 보면 화려한 움직임이 많은데, 멀리서 보면 LINE NEWS의 N자로 연결된다. 또한 컬러 스터디를 통해 기존까지 다양하게 사용해오던 컬러감을 배제하고, 블랙 앤 화이트로 심플하게 통일하여, N자의 형태가 더욱 돋보일 수 있도록 했다.</sub
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="layerBtnBox ml0 layerInner">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="mission6">
+                  <img src="../asset/images/common/detail/mission06_img.png" alt="mission6" />
+                  <span class="txtBr">
+                    Next<br />
+                    MISSION 06
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE News Awards -->
+
+      <!-- Mission6 -->
+      <div class="detailPopup layerPopup deTextPopup" id="mission6Layer" data-index-number="28" data-item="mission6">
+        <div class="layerWrap yellow">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>28/30</p>
+              <span></span>
+              <p>CREATIVE MISSION 06</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerTextArea">
+            <div class="layerTextInner">
+              <div class="layerTextBox">
+                <b class="txtBr">
+                  CREATIVE <br />
+                  MISSION
+                  <i>06</i>
+                </b>
+                <p>
+                  We encourage an organizational culture that supports our employees and wants them to grow.
+                  <span data-i18n="allProduct.mission6.subdesc">개개인의 성장을 위해 더 크게 지원하는 조직문화를 조성한다.</span>
+                </p>
+              </div>
+            </div>
+            <div class="layerTextBtnBox">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="lineBitmax">
+                  <img src="../asset/images/common/detail/lineBitmax_img.png" alt="LINE Bitmax" />
+                  <span class="txtBr">
+                    Next<br />
+                    LINE BITMAX
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mission6 -->
+
+      <!-- LINE Bitmax -->
+      <div class="detailPopup layerPopup" id="lineBitmaxLayer" data-index-number="29" data-item="lineBitmax">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>29/30</p>
+              <span></span>
+              <p>LINE Bitmax</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.bitmax.title" class="txtBr">복잡한 블록체인 <br />금융서비스가 쉽고 <br />정확하게</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/lineBitmax.svg" alt="line Bitmax logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">LINE BIZ PLUS Biz UI</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.bitmax.subdesc">언제나 사용자 관점을 최우선 순위로 고려해 어렵고 복잡한 블록체인 금융 서비스를 사용자에게 직관적이고 간편하게 제공하고자 노력했습니다. 만족스러운 사용자 경험을 제공하기 위해 끊임없이 고민하고 테스트해 사용자 편의성을 향상하고 있습니다. LINE BITMAX 서비스 내에서 사용 중인 일러스트는 사용자 중심으로 정보에 담긴 뜻은 정확하고 쉽게 전달하는 데 초점을 맞추어 진행했습니다.</div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/lineBitmax_img.png" alt="" />
+              </div>
+            </div>
+            <div class="layerGrid layerInner">
+              <div class="columns w480">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineBitmax_img01.png" alt="" />
+                  <span data-i18n="allProduct.bitmax.col1.sub">다변화된 성장의 암호자산 서비스, LINE BITMAX</span>
+                  <sub data-i18n="allProduct.bitmax.col1.txt"
+                    >첫문장 교체 LINE BITMAX는 일본 LINE의 암호자산 서비스 중 하나로 간단하고 신뢰할 수 있고 쉬운 UX의 암호화폐 거래소이며 LINE 메신저 앱에서 쉽게 접근할 수 있다. 고객당 방문 횟수는 2020년 대비 280% 증가했고 평균 체류시간도 작년 대비 389% 증가했다. 거래량 또한 작년 대비 40% 증가하는 등 큰 폭의 성장을 이루고 있다. 향후 LINE BITMAX에서는 LINE의 암호자산인 LINK의 사용처를 확대하여 활용 빈도를 높여갈 예정이다. 네이버 Z의 아바타 서비스 ZEPETO와 LINE FRIENDS의 캐릭터 NFT에 LINE
+                    Blockchain이 활용되고 있으며, 이번 봄, NFT 종합 마켓 플레이스 LINE NFT를 론칭 예정이다. 앞으로도 블록체인 기술을 기반으로 한 서비스를 통해 새로운 가치를 사용자에게 전달해 나가고자 한다.</sub
+                  >
+                </p>
+              </div>
+              <div class="columns w480">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineBitmax_img02.png" alt="" />
+                  <span data-i18n="allProduct.bitmax.col2.sub">간명한 정보 디자인</span>
+                  <sub data-i18n="allProduct.bitmax.col2.txt"
+                    >LINE BITMAX 메뉴 중에서도 특히 예약 주문 디자인에 주목했다. 그동안 사용자는 현재가로 일반 주문만 가능했지만 암호자산은 시세 변동성이 크기 때문에 예약 주문은 꼭 필요한 기능이었다. 일반 주문과 예약 주문의 전체적인 일관성을 유지하기 위해 UI 디자인에 통일감을 주었다. 사용자가 예약주문을 쉽고 편리하게 이용할 수 있도록 불필요한 플로우와 요소를 제거하기 위해 기획/UX팀과 효율적으로 협업했고 결과적으로 플로우 2단계를 줄이고 화면 내 복잡도를 낮추는 불필요한 요소를 제거할 수 있었다.
+                    이러한 사용자 중심의 디자인은 암호자산 서비스에 대한 초보자의 접근을 용이하게 만드는 역할을 담당했다.</sub
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="layerBtnBox ml0 layerInner">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="lineOffice">
+                  <img src="../asset/images/common/detail/lineOffice_img.png" alt="line Office" />
+                  <span class="txtBr">
+                    Next<br />
+                    LINE Office
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE Bitmax -->
+
+      <!-- LINE Office -->
+      <div class="detailPopup layerPopup" id="lineOfficeLayer" data-index-number="30" data-item="lineOffice">
+        <div class="layerWrap">
+          <div class="layerHead">
+            <div class="layerHeadText">
+              <p>30/30</p>
+              <span></span>
+              <p>LINE Office</p>
+            </div>
+            <div class="layerClose">
+              <a href="javascript:;"></a>
+            </div>
+          </div>
+          <div class="layerProgress">
+            <div class="layerProgressbar">
+              <span class="proceeding"></span>
+            </div>
+          </div>
+          <div class="layerContainer">
+            <div class="layerMain layerInner opacityAni">
+              <div class="layerMainTitle">
+                <h4 data-i18n="allProduct.office.title" class="txtBr">사원들의 <br />WOW가 되다</h4>
+                <div class="layerMainInner">
+                  <div class="layerMainLogo">
+                    <img src="../asset/images/logo/lineOffice.svg" alt="line Office logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="layerMainText">
+                <div class="layerMainSubTitle txtBr">LINE Corp. Space Design, <br />LINE Plus BX Design, <br />LINE Taiwan Limited <br />BX Design</div>
+                <div class="layerMainDesc txtBr" data-i18n="allProduct.office.subdesc">코로나 팬데믹으로 인해 업무의 형태가 다양하게 변화하고 있습니다. 많은 기업이 재택근무를 지원하면서 비대면, 거리 두기에 맞춰 오피스 환경을 바꾸고 있는 상황이기에 LINE의 오피스도 이러한 시대의 흐름에 맞춰 진화하고 있습니다. LINE의 상징성을 담아 심미성, 사용성, 편의성을 고려해 작업했습니다.</div>
+              </div>
+            </div>
+            <div class="layerImgArea layerInner">
+              <div class="layerImgBox">
+                <img src="../asset/images/common/detail/lineOffice_img.png" alt="" />
+              </div>
+            </div>
+            <div class="layerGrid layerInner">
+              <div class="columns w1120">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineOffice_img01.png" alt="" />
+                </p>
+              </div>
+              <div class="columns w480">
+                <p>
+                  <span class="mt0" data-i18n="allProduct.office.col1.sub">WOW를 경험하도록 디자인, 요츠야(Yotsuya) 오피스</span>
+                  <sub data-i18n="allProduct.office.col1.txt"
+                    >요츠야 오피스는 기존 신주쿠 미라이나 오피스를 대체하고 본사 기능을 하게 됨에 따라 창업 10주년을 맞은 라인의 새로운 시작점으로써 사원들이 ‘WOW’를 경험할 수 있는 공간으로 디자인되었다. 그동안 미라이나 오피스에서 경험했던 과제를 재검토했고 Flexible, Connect, Sustainable 등의 세 가지 키워드로 라인의 업무 환경에 맞는 오피스 디자인 작업을 진행했다. 모듈과 유닛 시스템으로 다양한 레이아웃을 자유롭게 만들어 사원 간의 대화 및 업무 방식에 유연성을 보탰고 원활한 의견 교환과 다양한 업무
+                    스타일을 지원할 수 있는 FIELD 30 등의 공간을 창출, 사원과 서비스 간의 거리를 좁혔다. 또한 Eco-Friendly 한 재료들을 적극적으로 활용해 환경 문제에도 기여하고자 했다. 일본의 Space Design팀은 요츠야 오피스 프로젝트를 위해 타사의 오피스를 견학, 다양한 프로토타입 테스트, 실물 테스트 등을 꼼꼼하게 거쳤으며 노무라공예사의 디자이너들과 함께 컨셉부터 디테일까지 충분히 논의하면서 작업했다. 프로젝트가 마무리된 후 코로나 상황에 맞춰 회의실 통기성 확보 등 세세한 부분에 대한 수정이
+                    들어갔다. 현재는 재택근무, 비대면 업무도 문제없이 지원할 수 있는 오피스로 자리해 LINE 사원들의 ‘WOW’가 되기에 충분하다.</sub
+                  >
+                </p>
+              </div>
+              <div class="columns w1600">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineOffice_img02.png" alt="" />
+                </p>
+              </div>
+              <div class="columns w480">
+                <p>
+                  <span class="mt0" data-i18n="allProduct.office.col2.sub">‘LINE 다움’을 담은 LINE Plus 분당오피스</span>
+                  <sub data-i18n="allProduct.office.col2.txt"
+                    >한국 BX팀은 공간 기획부터 ‘LINE은 어떤 회사인가’, ‘LINER는 어떠한 형태로 근무를 하는가’, ‘LINER들이 더 나은 퍼포먼스를 만들어내기 위해 오피스는 어떤 편의성을 갖춰야 하는가’ 등의 질문을 던지고 공간에 ‘LINE 다움’을 담고자 노력했다. 재택근무의 비율이 높아짐에 따라 화상 회의 시스템 환경을 오피스에 적극 반영하고, 여러 크기와 형태의 미팅룸으로 업무 공간을 다양화했다. 좌석 자율화를 위한 개인 라커 공간, 기존의 하이브(오픈된 공간으로 LINER들이 가볍게 의견을 나누고 소회의 등이 가능한
+                    곳)를 개선해 정보 공유 및 업무 수행을 원활하게 했다. 좌석과 회의실의 수는 향후 코로나가 종식되고 사원들의 출근이 본격적으로 재개될 때를 함께 고려했으며, 복도에 파티션을 설치하고 모든 좌석에서 창을 볼 수 있게 하여 업무 환경의 질을 높였다. BX팀은 ‘LINE 다움’을 담은 오피스를 만들기 위해 LINE의 이미지와 분위기에 대해 조사했고 마감재, 규격, 심지어 액자 하나하나에까지 LINE의 아이덴티티를 담고자 했다. 공간부터 사용 가구까지 다양한 레퍼런스를 체크하고, 사용성, 편의성, 심미성 고려해
+                    개선되었다. 2021년 완성된 20층의 공용 공간도 공통된 ‘LINE 다움’을 반영하여 LINER들의 업무 지원과 편의에 맞춘 공간으로 디자인했다.</sub
+                  >
+                </p>
+              </div>
+              <div class="columns w545">
+                <p>
+                  <img class="mt0" src="../asset/images/common/detail/lineOffice_img03.png" alt="" />
+                </p>
+              </div>
+              <div class="columns w480">
+                <p>
+                  <span class="mt0" data-i18n="allProduct.office.col3.sub">GREEN을 공간에 들인 대만 오피스</span>
+                  <sub data-i18n="allProduct.office.col3.txt"
+                    >대만 오피스는 새로운 사무실의 컨셉을 ‘GREEN’에 두고 공용 공간을 포함한 다양한 공간에 화분을 배치했다. 또한 이전 사무실과 비교, 오픈 공간을 많이 확보해 자유로운 분위기를 내면서도 효율적인 활용이 기능하게 했다. 오피스가 위치한 건물 자체도 녹화(緑化)의 특성이 있는 빌딩인데 사무실 옆 공원이라는 느낌으로 실내와 실외가 연결되는 컨셉을 살리고 친환경적인 업무 환경 및 문화를 만들고자 했다. 실제로 공간을 사용하는 사원에게 디자인 전 단계에 대한 설문조사를 진행했으며 여기에서 나온
+                    의견들을 최대한 반영했다. 코로나로 인해 새로 도입된 자율 좌석제에 맞춘 공간 디자인과 사원증으로 간단히 사물함을 열 수 있게 한 것은 편리한 업무 환경 개선이라는 점에서 눈에 띄는 대목이다.
+                  </sub>
+                </p>
+              </div>
+            </div>
+            <div class="layerBtnBox ml0 layerInner">
+              <div class="layerBtn">
+                <a href="javascript:;" data-item="enjoy">
+                  <img src="../asset/images/common/detail/enjoyTheChallenges.png" alt="enjoy the challenges" />
+                  <span class="txtBr">
+                    Next<br />
+                    Enjoy<br />
+                    The Challenges
+                    <b>
+                      <i></i>
+                    </b>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINE Office -->
+
+      <!-- event Popup -->
+      <div id="eventPopup">
+        <div class="eventPopupBg"></div>
+        <div class="eventPopupArea">
+          <div class="eventPopupClose">
+            <a href="javascript:;" class="eventCloseBtn">
+              <img src="../asset/images/common/close_w.svg" alt="" />
+            </a>
+          </div>
+          <div class="eventPopupCont">
+            <div class="eventProgress">
+              <span></span>
+              <em class="proAniBar"></em>
+            </div>
+            <div class="eventPopupMsgNum">
+              <div class="msgNumText">
+                <b>응원 메시지 수</b>
+                <span class="msgCount">0</span>
+              </div>
+            </div>
+            <div class="eventPopupInner"></div>
+          </div>
+        </div>
+      </div>
+      <!-- event Popup -->
+
+      <!-- 상세페이지 List -->
+
+      <!-- content start -->
+      <div id="container">
+        <main class="main">
+          <div class="scrollOpen">
+            <div class="scrollBox">
+              <lottie-player src="../asset/images/lottie/scrollOpenBook.json" speed="1" loop autoplay></lottie-player>
+            </div>
+          </div>
+          <div class="mainMedia">
+            <video muted>
+              <source src="../asset/images/media/intro.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="mainSequence">
+            <div class="sq">
+              <canvas id="bookSq"></canvas>
+            </div>
+          </div>
+        </main>
+        <section class="section" id="about">
+          <div class="aboutIntro">
+            <div class="aboutIntroText">
+              <h2><b>Infinite</b></h2>
+              <h2><b>Possibilities</b></h2>
+              <p data-i18n="about.intro.title">책으로 만나보는 LINE 디자인</p>
+              <span data-i18n="about.intro.desc" class="txtBr">수많은 씨앗이 뿌려져 울창한 초록 숲을 이루기까지 <br />그 모든 시작은 비옥한 땅, LINE GROUND로부터 비롯됩니다.<br />우리는 LINE CREATIVE 철학에서 출발해 <br />무한한 가능성에 대하여 이야기합니다. </span>
+            </div>
+          </div>
+          <div class="aboutGreenMask">
+            <div class="mask">
+              <span></span>
+            </div>
+          </div>
+          <div class="aboutInfo">
+            <div class="aboutInfoInner">
+              <div class="aboutInfoArea">
+                <h3 class="txtBr"><b>Global</b></h3>
+                <h3 class="txtBr"><b>Standard of</b></h3>
+                <h3 class="txtBr"><b>Creative</b></h3>
+                <p data-i18n="about.info" class="txtBr">33개국, 월 1억 8,700만명 사용자를 가진 LINE은 더 많은 세계 사람들의 <br />니즈에 부합하기 위해 지속적으로 혁신적인 기술력과 서비스를 선보입니다.<br />더불어 LINE CREATIVE는 디자인 분야를 선도하며 디자인의 세계적인 기준을 <br />새롭게 정의해가고 있습니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="aboutEnd">
+            <div class="aboutEndArea">
+              <div class="overlay">
+                <div class="overlayLine">
+                  <img src="../asset/images/common/lineIcon.svg" alt="Line" />
+                </div>
+              </div>
+              <div class="aboutEnbInner">
+                <div class="aboutEndText">
+                  <h3>
+                    <b>line</b>
+                    <span>design</span>
+                  </h3>
+                  <p data-i18n="about.ending" class="txtBr">LINE은 어려운 도전을 마다하지 않고 <br />신선하고 놀라운 해법을 내놓고 있습니다. <br />사용자들의 삶을 더욱 편리하고 즐겁게 <br />바꾸기 위한 LINE의 디자인을 <br />만나봅니다.</p>
+                </div>
+                <div class="aboutEndImg endImg_01">
+                  <img src="../asset/images/common/aboutEnd_img01.png" alt="" />
+                </div>
+                <div class="aboutEndImg endImg_02">
+                  <img src="../asset/images/common/aboutEnd_img02.png" alt="" />
+                </div>
+                <div class="aboutEndImg endImg_03">
+                  <img src="../asset/images/common/aboutEnd_img03.png" alt="" />
+                </div>
+                <div class="aboutEndImg endImg_04">
+                  <img src="../asset/images/common/aboutEnd_img04.png" alt="" />
+                </div>
+                <div class="aboutEndImg endImg_05">
+                  <img src="../asset/images/common/aboutEnd_img05.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="product">
+          <ul class="proScrollText">
+            <li class="scText_01">
+              <p>
+                <b>
+                  <span>enjoy</span>
+                  <span>enjoy</span>
+                  <span>enjoy</span>
+                  <span>enjoy</span>
+                  <span>enjoy</span>
+                  <span>enjoy</span>
+                  <span>enjoy</span>
+                  <span>enjoy</span>
+                  <span>enjoy</span>
+                  <span class="on">enjoy</span>
+                  <span>enjoy</span>
+                  <span>enjoy</span>
+                  <span>enjoy</span>
+                  <span>enjoy</span>
+                  <span>enjoy</span>
+                  <span>enjoy</span>
+                  <span>enjoy</span>
+                  <span>enjoy</span>
+                  <span>enjoy</span>
+                </b>
+              </p>
+            </li>
+            <li class="scText_02">
+              <p>
+                <b>
+                  <span>the</span>
+                  <span>the</span>
+                  <span>the</span>
+                  <span>the</span>
+                  <span>the</span>
+                  <span>the</span>
+                  <span>the</span>
+                  <span>the</span>
+                  <span>the</span>
+                  <span>the</span>
+                  <span>the</span>
+                  <span>the</span>
+                  <span class="on">the</span>
+                  <span>the</span>
+                  <span>the</span>
+                  <span>the</span>
+                  <span>the</span>
+                  <span>the</span>
+                  <span>the</span>
+                  <span>the</span>
+                  <span>the</span>
+                  <span>the</span>
+                  <span>the</span>
+                  <span>the</span>
+                  <span>the</span>
+                </b>
+              </p>
+            </li>
+            <li class="scText_03">
+              <p>
+                <b>
+                  <span>challenges</span>
+                  <span>challenges</span>
+                  <span>challenges</span>
+                  <span>challenges</span>
+                  <span class="on">challenges</span>
+                  <span>challenges</span>
+                  <span>challenges</span>
+                  <span>challenges</span>
+                  <span>challenges</span>
+                </b>
+              </p>
+            </li>
+          </ul>
+          <div class="payment">
+            <div class="payCont">
+              <div class="paySequence">
+                <div class="linepaySq">
+                  <canvas id="paySq" class="magnetize"></canvas>
+                </div>
+                <div class="payContainer">
+                  <div class="payInner hoverEv popupShow cursorChange" data-item="linePay">
+                    <div class="payTitle">
+                      <h4>
+                        <b
+                          ><span>Creating<em class="hoverBar h8"></em></span></b
+                        ><br />
+                        <b
+                          ><span>a Convenient<em class="hoverBar h8"></em></span></b
+                        ><br />
+                        <b
+                          ><span>and Smart<em class="hoverBar h8"></em></span></b
+                        ><br />
+                        <b
+                          ><span>Lifestyle<em class="hoverBar h8"></em></span
+                        ></b>
+                        <!-- <span class="hoverArr"><img src="../asset/images/common/hover_arr.svg" alt="" /></span> -->
+                      </h4>
+                      <p data-i18n="product.linePay.title" class="txtBr">세계인이 선택한 스마트 결제서비스, <br />LINE PAY</p>
+                    </div>
+                    <div class="payDesc">
+                      <p data-i18n="product.linePay.desc" class="txtBr">LINE Pay는 2014년부터 시작해온 LINE의 온라인 결제서비스로, Cashless, Walletless를 넘어 보다 빠르고 간단한 결제 방식으로 더욱 편리하고 스마트한 라이프스타일을 제안합니다.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="productView">
+            <div class="viewArea">
+              <div class="viewBtnBox">
+                <div class="viewBtnInner">
+                  <div class="viewImgBtn hoverEv cursorChange">
+                    <div class="imgBox popupShow" data-item="lineMan">
+                      <div class="viewTitle">
+                        <h4>
+                          <b
+                            ><span>Maximizing <em class="hoverBar h8"></em></span
+                          ></b>
+                          <br />
+                          <b
+                            ><span>the Strength of <em class="hoverBar h8"></em></span
+                          ></b>
+                          <br />
+                          <b
+                            ><span>the LINE <em class="hoverBar h8"></em></span
+                          ></b>
+                          <br />
+                          <b
+                            ><span>Ecosystem<em class="hoverBar h8"></em></span
+                          ></b>
+                        </h4>
+                      </div>
+                      <div class="img magnetize" data-dist="width">
+                        <img src="../asset/images/common/product_view.jpg" alt="" class="Ani" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="viewDesc">
+                  <p class="txtBr cursorChange popupShow" data-item="lineMan" data-i18n="product.lineMan.title">태국 LINE 최초의 <br />오리지널 서비스, <br />LINE MAN</p>
+                  <sub class="txtBr">
+                    <span class="txtBr cursorChange popupShow" data-item="lineMan" data-i18n="product.lineMan.desc"
+                      >LINE MAN은 태국 시장에서 가장 빠르게 성장하고 있는 <br />주문형 배달 플랫폼으로 음식 배달, 메신저, 택시, 마트 등에 폭넓게 <br />서비스하고 있습니다. 태국 내 67개 주의 590만 MAU를 보유하였으며, <br />더 많은 지역의 더 많은 고객에게 편리함을 제공하고자 합니다. <br />정확하게 태국 사용자들의 요구를 충족시킬 수 있도록 사용자들의 <br />의견을 밀접하게 들을 수 있는 사업 부서와 긴밀하게 협력하며 <br />프로토타입을 설계합니다.</span
+                    >
+                  </sub>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="call">
+            <div class="callCont">
+              <div class="loopingMedia">
+                <lottie-player class="magnetize" src="../asset/images/lottie/linecall.json" speed="1" loop autoplay style="width: 100%; height: 100%; display: block"></lottie-player>
+              </div>
+              <div class="callText cursorChange popupShow hoverEv" data-item="lineCall">
+                <div class="callTitle">
+                  <h4>
+                    <b
+                      ><span>Reflect and<em class="hoverBar h8"></em></span
+                    ></b>
+                    <br />
+                    <b
+                      ><span>Expand the<em class="hoverBar h8"></em></span
+                    ></b>
+                    <br />
+                    <b
+                      ><span>User's Different<em class="hoverBar h8"></em></span
+                    ></b>
+                    <br />
+                    <b
+                      ><span>Needs<em class="hoverBar h8"></em></span
+                    ></b>
+                  </h4>
+                </div>
+                <div class="callDesc">
+                  <p class="txtBr" data-i18n="product.lineCall.title">통화 기능을 넘어 진화하는 VoIP 플랫폼, <br />LINE CALL</p>
+                  <span class="txtBr" data-i18n="product.lineCall.desc">코로나가 지속되면서 재택을 하는 사람이 늘고 또 쉽게 만나지 못하는 가족 또는 친구들과 연락하기 위해 콜을 사용하는 사용자가 증가했습니다. 단순히 통화 기능을 넘어 친구들과 놀이의 수단, 동료들과 미팅의 수단, 운동 강습의 수단으로까지 콜의 기능이 점차 확장되고 있습니다. 이러한 사용자 니즈에 부응하기 위해 끊임없이 피드백을 듣고 사용자 중심으로 업데이트 해나가는 과정을 반복합니다.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="care">
+            <div class="careArea hoverEv">
+              <div class="careImg cursorChange popupShow magnetize" data-dist="height" data-item="lineDoctor">
+                <img src="../asset/images/common/product_care.jpg" alt="" />
+              </div>
+              <div class="careText popupShow cursorChange" data-item="lineDoctor">
+                <div class="careTitle">
+                  <p>
+                    <b>The Design<em class="hoverBar h8"></em></b>
+                  </p>
+                  <br />
+                  <p>
+                    <b>Loved by<em class="hoverBar h8"></em></b>
+                  </p>
+                  <br />
+                  <p>
+                    <b>Everyone<em class="hoverBar h8"></em></b>
+                  </p>
+                </div>
+                <div class="careDesc">
+                  <p class="txtBr" data-i18n="product.lineDoc.title">차세대 진료 시스템의 대안, <br />LINE DOCTOR</p>
+                  <span class="txtBr" data-i18n="product.lineDoc.desc">LINE 닥터는 일본에서 주목을 받고 있는 서비스 중 하나로, <br />LINE 내에서 병원 예약을 하고, LINE 비디오 통화기능을 사용해서 <br />병원 진료를 보고, 약의 처방, 라인 페이로 결제까지 모두 원스톱으로 <br />진행할 수 있는 통합 의료 서비스입니다. 사용하는 연령층을 고려해서 <br />심플하하고 이해하기 쉬운 UI를 고집하며, 의료진 복장을 한 전용 <br />캐릭터를 개발하여 대중들에게 직관적이고 친근감있게 <br />다가가고 있습니다.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="seed">
+            <div class="seedSequence">
+              <div class="seedSqCont cursorChange popupShow" data-item="lineSeedSans">
+                <lottie-player class="magnetize" src="../asset/images/lottie/lineseed.json" speed="1" loop autoplay style="width: 100%; height: 100%; display: block"></lottie-player>
+                <div class="seedTextBox">
+                  <p class="txtBr" data-i18n="product.lineFont.title">전용 폰트는 기업의 목소리, <br />LINE SEED FONT</p>
+                  <span class="txtBr" data-i18n="product.lineFont.desc"
+                    >LINE이 성장하며 코어 타겟도 글로벌 전역으로 확대됨에 따라, <br />LINE만의 아이덴티티를 잘 나타낼 수 있는 전용 폰트에 대한 필요성을 느꼈습니다. <br />이미지로 표현되는 로고가 기업의 얼굴이라면, 텍스트를 표현하는 폰트야말로 <br />특정 인격체의 말투나 톤처럼 한 기업의 목소리를 표현하는 중요한 요소입니다. <br />글로벌 기업으로 자리하는 라인은 글로벌 네트워크에서도 범용적으로 사용할 수 있는 <br />영문 폰트를 시작으로, 언어별 폰트를 만들어가고 있습니다.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sticker">
+            <div class="stickerCont">
+              <div class="stickerLeft">
+                <lottie-player src="../asset/images/lottie/lineCharacterLeft.json" speed="1" loop autoplay></lottie-player>
+              </div>
+              <div class="stickerText hoverEv cursorChange popupShow" data-item="lineCharacter">
+                <div class="stickerTitle">
+                  <h4>
+                    <b
+                      ><span>Separate and<em class="hoverBar h8"></em></span
+                    ></b>
+                    <br />
+                    <b
+                      ><span>Together<em class="hoverBar h8"></em></span
+                    ></b>
+                    <br />
+                    <b
+                      ><span>in This World<em class="hoverBar h8"></em></span
+                    ></b>
+                  </h4>
+                </div>
+                <div class="stickerDesc">
+                  <p class="txtBr" data-i18n="product.lineSticker.title">모두에게 사랑받는 LINE 메신저의 핵심 서비스, <br />LINE CHARACTER STICKER</p>
+                  <span class="txtBr" data-i18n="product.lineSticker.desc">스티커는 특히 다수의 사용자들이 실생활에서 주로 사용하기 때문에 직접 디자인한 <br />스트커가 발래됐을때, 더 나아가 실제로 사용하는 것을 목격했을때 희열이 가장 큰 것 같습니다. <br />실제 다운로드 및 사용률 데이터 또는 SNS 후기 등을 통해 결과물에 대한 <br />사람들의 긍정적인 피드백을 볼 때면 매우 뿌듯합니다.</span>
+                </div>
+              </div>
+              <div class="stickerRight">
+                <lottie-player src="../asset/images/lottie/lineCharacterRight.json" speed="1" loop autoplay></lottie-player>
+              </div>
+              <div class="circleBox">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+          <div class="allView">
+            <p class="allText textAni_01">
+              LINE MAN LINE PAY LINE CALL LINE SEED FONT LINE CHARACTER STICKER LINE MAN LINE PAY LINE CALL LINE SEED FONT LINE CHARACTER STICKER LINE MAN LINE PAY LINE CALL LINE SEED FONT LINE CHARACTER STICKER LINE MAN LINE PAY LINE CALL LINE SEED FONT LINE CHARACTER STICKER LINE MAN LINE PAY LINE CALL LINE SEED FONT LINE CHARACTER STICKER LINE MAN LINE PAY LINE CALL LINE SEED FONT LINE CHARACTER STICKER LINE MAN LINE PAY LINE CALL LINE SEED FONT LINE CHARACTER STICKER LINE MAN LINE PAY LINE
+              CALL LINE SEED FONT LINE CHARACTER STICKER LINE MAN LINE PAY LINE CALL LINE SEED FONT LINE CHARACTER STICKER
+            </p>
+            <p class="allText textAni_02">
+              LDS LINE Manga LINE Avatar LINE DOCTOR LDS LINE Manga LINE Avatar LINE DOCTOR LDS LINE Manga LINE Avatar LINE DOCTOR LDS LINE Manga LINE Avatar LINE DOCTOR LDS LINE Manga LINE Avatar LINE DOCTOR LDS LINE Manga LINE Avatar LINE DOCTOR LDS LINE Manga LINE Avatar LINE DOCTOR LDS LINE Manga LINE Avatar LINE DOCTOR LDS LINE Manga LINE Avatar LINE DOCTOR LDS LINE Manga LINE Avatar LINE DOCTOR LDS LINE Manga LINE Avatar LINE DOCTOR LDS LINE Manga LINE Avatar LINE DOCTOR LDS LINE Manga
+              LINE Avatar LINE DOCTOR LDS LINE Manga LINE Avatar LINE DOCTOR LDS LINE Manga LINE Avatar LINE DOCTOR
+            </p>
+            <a href="javascript:;" class="allViewBtn viewPrjAll txtBr hoverEv">
+              <b>view all products<em class="hoverBar h8"></em></b>
+              <span></span>
+            </a>
+          </div>
+        </section>
+        <section class="section" id="culture">
+          <div class="progressbar">
+            <span></span>
+          </div>
+          <div class="culArea scrollX">
+            <div class="culCont pr0 nullF">
+              <div class="nullCont"></div>
+            </div>
+            <div class="culCont">
+              <div class="culInner">
+                <div class="culTitle">
+                  <sub>line culture</sub>
+                  <h4 class="txtBr">Growth and <br />Development</h4>
+                </div>
+                <div class="culImg commonImg">
+                  <img src="../asset/images/common/culture_communication.jpg" alt="" />
+                </div>
+                <div class="culInfo">
+                  <div class="culText">
+                    <p data-i18n="culture.lineCulture" class="txtBr">LINE은 성장하기 위해 커뮤니케이션하는 것을 마다하지 않습니다. <br />누구든 자신의 의견을 말할 수 있고 자신의 아이디어를 발전시킬 수 있습니다. <br />글로벌 기업으로서 문제의 해답을 찾기 위해 토론의 장을 펼칩니다. <br />지속 가능한 발전은 수평적 커뮤니케이션으로부터 시작됩니다.</p>
+                  </div>
+                  <div class="positionText">
+                    <p>Design</p>
+                    <p class="ml75">Culture</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="culCont">
+              <div class="talkGround">
+                <div class="talkImg commonImg">
+                  <img src="../asset/images/common/culture_talk.jpg" alt="" />
+                </div>
+                <div class="talkText">
+                  <p data-i18n="culture.talk" class="txtBr">
+                    코로나 이후 재택근무로 전환이 되며 서로 이야기할 수 있는 <br />기회가 없어짐에 따라 분기별로 공통의 주제를 가지고 <br />토론하는 캐주얼한 세션을 마련했다. 사전 서베이를 통해 <br />디자이너 사이 화제가 되고 있는 내용을 주제로 정하고, <br />해당 주제에 일가견이 있는 멤버들이 패널로 참가하여 <br />토크쇼 형태로 진행한다. 진화하고 있는 디자인 도구에 대한 <br />주제로 LINE에서는 어떻게 변화의 추세를 따라가야 하는지 <br />논의하기도 했는데, 그 결과 피그마라는 디자인 툴을 실제
+                    <br />도입한 사례도 있다. 디자이너가 선정한 핫 플레이스를 주제로 <br />일본과 한국의 디자이너들이 참여하여 디자인에 영감을 <br />받을 수 있는 장소들을 공유하며 서로에게 신선한 자극이 <br />되기도 했다.
+                  </p>
+                </div>
+                <div class="talkPosition">
+                  <p class="txtBr">Talk Ground</p>
+                </div>
+              </div>
+            </div>
+            <div class="culCont">
+              <div class="playGround">
+                <div class="playPosition">
+                  <p class="txtBr">Play<br />Ground</p>
+                </div>
+                <div class="playText">
+                  <p data-i18n="culture.play" class="txtBr">
+                    리드를 제외한 디자이너가 모여서 캐주얼하게 이야기 나누는 <br />대화방을 플레이 그라운드라고 한다. LINE 디자인 문화를 <br />주도하는 컬쳐 TF멤버들이 대화방에서 분위기를 띄우고 <br />주제를 던지는 촉진제 역할을 한다. 최근 관심사나 회사 생활 등 <br />어떤 주제든지 자유롭게 이야기하도록 하고, 매주 대화방에서 <br />이슈가 된 내용들을 정리해 실현 방향성을 검토한다. <br />이를 통해 디자이너들의 소속감과 친목 강화를 위해 동아리나 <br />스터디 그룹 등 공통의 관심사를 가진 소모임들이
+                    생겨났고, <br />지속적으로 장려하고 있다.
+                  </p>
+                </div>
+                <div class="palyImg commonImg">
+                  <img src="../asset/images/common/culture_play.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="culCont">
+              <div class="cast">
+                <div class="castPosition">
+                  <p class="txtBr">PDCast</p>
+                </div>
+                <div class="castImg commonImg">
+                  <img src="../asset/images/common/culture_cast.jpg" alt="" />
+                </div>
+                <div class="castText">
+                  <p data-i18n="culture.cast" class="txtBr">
+                    직장에서 동료와 떠는 짧은 수다는 생각보다 많은 정보를 포함하고 있기 마련이다. <br />우리 조직에서 일어나고 있는 이야기부터 회사 주변 맛집 정보, 가보니 좋았던 전시회 추천까지, <br />내가 직접 대화에 참여하지 않아도 동료들의 대화를 엿들어 볼 수 있었던 복도 대화. <br />PD Cast 는 이를 다시 들려주기 위해 시작된 LINE 디자이너 대상의 라디오 프로그램이다. <br />원격근무로 인해 나누기 힘들었던 자취 생활의 사소한 이야기, 다른팀의 업무 진행방법, <br />사내 유명인사와의 인터뷰 등을 매월
+                    1회 업로드한다. 비록 몸은 떨어져 있지만 <br />모두가 함께 일하고 있음을 느낄 수 있다.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="culCont">
+              <div class="idea">
+                <div class="ideaImg commonImg">
+                  <img src="../asset/images/common/culture_idea.jpg" alt="" />
+                </div>
+                <div class="ideaPosition">
+                  <p>CREATIVE</p>
+                  <p class="ml100">CENTER ON</p>
+                </div>
+                <div class="ideaText">
+                  <p data-i18n="culture.idea" class="txtBr">
+                    <b>CREATIVE CENTER ON</b>LINE 디자인 조직 문화를 더욱 발전시키기 위해 매년 진행하는 <br />연말 이벤트로, Workshop, Presentation, ON AWARD의 3개 세션으로 <br />구성된다. Workshop에서는 팀의 경계를 허물고 모든 멤버들이 친해질 수 있도록 <br />재미있는 게임 등의 이벤트를 진행한다. Presentation에서는 각 디자인 분야의 <br />담당자들이 트렌드와 정보를 공유하고, ON AWARD에서는 1년 중 가장 빛나는 <br />활약을 보인 멤버를 시상하고 함께 칭찬한다. 최근 2년간 코로나로 인해 온라인으로
+                    <br />진행했지만 통일된 키비주얼과 드레스코드로 모두가 같은 공간에 있는 듯한 <br />단합된 분위기로 이벤트를 즐길 수 있었다.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="culCont">
+              <div class="ideaPrj">
+                <div class="ideaPrjImg commonImg">
+                  <img src="../asset/images/common/culture_idea_project.jpg" alt="" />
+                </div>
+                <div class="ideaPrjPosition">
+                  <p class="txtBr">CREATIVE<br />IDEA<br />PROJECT</p>
+                </div>
+                <div class="ideaPrjText">
+                  <p data-i18n="culture.ideaPrj" class="txtBr">
+                    디자이너가 자신의 담당 업무나 분야의 경계를 떠나 LINE으로 실행할 수 있는 새로운 서비스, 프로세스, 조직문화 등 모든 영역에서 자유롭게 아이디어를 펼칠 수 있는 공모전이다. 업무시간의 일부를 활용해 독창성과 자주성을 발휘해 폭넓게 제안 할 수 있는 기회를 제공함으로써 새로운 것을 창출해내는 힘을 키우고 개인의 성장으로 이어가고 있다. 수상한 프로젝트는 제안 단계에만 머무르지 않고 실제 사업화 수 있도록 지속적인 연구에 필요한 자원이나 예산을 적극적으로 서포트 한다. 실제 참여한
+                    디자이너들로부터 도전, 작극, 동기 부여에 대한 긍정적인 피드백을 받고 있으며, 매년 회차를 거듭함에 따라 내용이 업그레이드 되고 있다.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="culCont pr0 nullF bgblack">
+              <div class="nullCont"></div>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="greeting">
+          <div class="grtArea">
+            <div class="grtNameList">
+              <ul class="grtList">
+                <li class="grtItem jakeItem active">
+                  <a href="javascript:;" class="hoverEv" data-item="#jakeKnapp">
+                    <b>Jake Knapp<em class="hoverBar h8 bgSkyBlue"></em></b>
+                  </a>
+                </li>
+                <li class="grtItem chrisItem">
+                  <a href="javascript:;" class="hoverEv" data-item="#chrisNesladek">
+                    <b>Chris Nesladek<em class="hoverBar h8 bgSkyBlue"></em></b>
+                  </a>
+                </li>
+                <li class="grtItem jamesItem">
+                  <a href="javascript:;" class="hoverEv" data-item="#james">
+                    <b>James<em class="hoverBar h8"></em></b>
+                  </a>
+                </li>
+                <li class="grtItem sunkwanItem">
+                  <a href="javascript:;" class="hoverEv" data-item="#sunkwan">
+                    <b>Sunkwan Kim<em class="hoverBar h8"></em></b>
+                  </a>
+                </li>
+                <li class="grtItem mogiItem">
+                  <a href="javascript:;" class="hoverEv" data-item="#mogi">
+                    <b>Mogi<em class="hoverBar h8"></em></b>
+                  </a>
+                </li>
+                <li class="grtItem miliItem">
+                  <a href="javascript:;" class="hoverEv" data-item="#miliKang">
+                    <b>Mili Kang<em class="hoverBar h8"></em></b>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="grtCont">
+              <div class="grtNullArea"></div>
+              <div class="grtInner bgSkyblue" id="jakeKnapp">
+                <div class="grtProfile">
+                  <div class="grtPrfText">
+                    <h4 class="name" data-i18n="greeting.jakeKnapp.name">Jake Kanpp</h4>
+                    <span class="position txtBr" data-i18n="greeting.jakeKnapp.position">INVENTOR OF DESIGN SPRINT AND <br />NEW YORK TIMES BESTSELLING AUTHOR</span>
+                    <em class="bar"></em>
+                    <p class="jobTitle" data-i18n="greeting.jakeKnapp.jobTitle">&lt;뉴욕타임즈&gt; 베스트셀러 작가 & <br />SPRINT 창안자​</p>
+                  </div>
+                  <div class="grtProfileImg">
+                    <img src="../asset/images/common/greeting_jakeKnapp.jpg" alt="Jake Knapp" />
+                  </div>
+                </div>
+                <div class="grtText">
+                  <p data-i18n="greeting.jakeKnapp.msg" class="txtBr">디자이너들은 세상을 하나씩 만들어내듯 <br />추상적인 아이디어를 구체적인 현실로 <br />만들어내는 존재입니다. <br />LINE의 디자인은 세련된 동시에 <br />장난스럽기도 하고 캐릭터들은 웃음을 <br />가져다 줍니다. 이 책은 이러한 라인만의 <br />세상을 만들어내는 디자이너들의 <br />이야기를 담고 있습니다.</p>
+                </div>
+              </div>
+              <div class="grtInner bgSkyblue" id="chrisNesladek">
+                <div class="grtProfile">
+                  <div class="grtPrfText">
+                    <h4 class="name" data-i18n="greeting.chris.name">Chris Nesladek</h4>
+                    <span class="position txtBr" data-i18n="greeting.chris.position">PRODUCT DESIGN LEAD FOR SPARK AR <br />(PREVIOUSLY OCULUS VR), META</span>
+                    <em class="bar"></em>
+                    <p class="jobTitle" data-i18n="greeting.chris.jobTitle">메타 스파크 AR 디자인 리드</p>
+                  </div>
+                  <div class="grtProfileImg">
+                    <img src="../asset/images/common/greeting_chrisNeslagek.jpg" alt="Jake Knapp" />
+                  </div>
+                </div>
+                <div class="grtText">
+                  <p data-i18n="greeting.chris.msg" class="txtBr">LINE의 서비스는 가족과 같습니다. <br />모든 게 연결되어 있고 전체적으로 같은 <br />기능을 하지만, 한편으로 내가 직접 <br />원하는 섹션을 탐색하고 그게 문자이든 <br />통화이든 아니면 타임라인 둘러보기든 <br />간에 내가 가장 관심 있는 활동에만 <br />집중할 수 있습니다.</p>
+                </div>
+              </div>
+              <div class="grtInner bgGreen" id="james">
+                <div class="grtProfile">
+                  <div class="grtPrfText">
+                    <h4 class="name" data-i18n="greeting.james.name">James. 김성훈</h4>
+                    <span class="position txtBr" data-i18n="greeting.james.position">LINE Plus Corporation Chief Creative Officer, <br />IPX Corporation CEO</span>
+                    <em class="bar"></em>
+                    <p class="jobTitle" data-i18n="greeting.james.jobTitle">디자인 총괄​</p>
+                  </div>
+                  <div class="grtProfileImg">
+                    <img src="../asset/images/common/greeting_james.jpg" alt="Jake Knapp" />
+                  </div>
+                </div>
+                <div class="grtText">
+                  <p data-i18n="greeting.james.msg" class="txtBr">디자인 조직은 새로운 서비스를 <br />만들고 활용하고 개발하는 것까지 <br />반영하며 성장해야 합니다. <br />LINE 디자인 조직은 꽤 확장적이어서 <br />서비스의 기획, 방향성을 함께 논의하고 <br />펼쳐 나가는 중요한 조직입니다.</p>
+                </div>
+              </div>
+              <div class="grtInner bgGreen" id="sunkwan">
+                <div class="grtProfile">
+                  <div class="grtPrfText">
+                    <h4 class="name" data-i18n="greeting.sunkwan.name">Sunkwan Kim. 김선관</h4>
+                    <span class="position txtBr" data-i18n="greeting.sunkwan.position">LINE Corporation, LINE Plus Corporation <br />Head of Creative & CX Executive Officer</span>
+                    <em class="bar"></em>
+                    <p class="jobTitle" data-i18n="greeting.sunkwan.jobTitle">크리에이티브센터 총괄 (센터장)</p>
+                  </div>
+                  <div class="grtProfileImg">
+                    <img src="../asset/images/common/greeting_sunkwanKim.jpg" alt="Jake Knapp" />
+                  </div>
+                </div>
+                <div class="grtText">
+                  <p data-i18n="greeting.sunkwan.msg" class="txtBr">How 어떻게 만들지 세밀한 부분을 <br />디자인한다면, What 무엇을 만들지 <br />디자인의 사업계획부터 큰 그림을 <br />그릴 수 있어야 합니다. 서비스의 본질을 <br />사용자들이 쉽고 친밀감 있게 <br />이해할 수 있는 디자인이 LINE의 <br />디자인이라고 생각합니다.</p>
+                </div>
+              </div>
+              <div class="grtInner bgGreen" id="mogi">
+                <div class="grtProfile">
+                  <div class="grtPrfText">
+                    <h4 class="name" data-i18n="greeting.mogi.name">Mogi. 강병목</h4>
+                    <span class="position txtBr" data-i18n="greeting.mogi.position">LINE Plus Corporation Art Director & <br />Executive Officer</span>
+                    <em class="bar"></em>
+                    <p class="jobTitle" data-i18n="greeting.mogi.jobTitle">아트디렉터​​</p>
+                  </div>
+                  <div class="grtProfileImg">
+                    <img src="../asset/images/common/greeting_mogi.jpg" alt="Jake Knapp" />
+                  </div>
+                </div>
+                <div class="grtText">
+                  <p data-i18n="greeting.mogi.msg" class="txtBr">적당히 만족스러운 수준에서 <br />멈추지 않고, 더 개선할 부분은 없는지, <br />완성도를 조금이라도 더 끌어올릴 <br />여지가 없는지를 집요하게 고민하고, <br />작지만 치밀하게 개선을 거듭할 때 <br />비로소 ‘한 끗 다른 서비스’가 <br />나올 수 있습니다.</p>
+                </div>
+              </div>
+              <div class="grtInner bgGreen" id="miliKang">
+                <div class="grtProfile">
+                  <div class="grtPrfText">
+                    <h4 class="name" data-i18n="greeting.mili.name">Mili Kang. 강미리</h4>
+                    <span class="position txtBr" data-i18n="greeting.mili.position">LINE Plus Corporation <br />Product Design Executive Officer</span>
+                    <em class="bar"></em>
+                    <p class="jobTitle" data-i18n="greeting.mili.jobTitle">프로덕트 디자인 총괄​</p>
+                  </div>
+                  <div class="grtProfileImg">
+                    <img src="../asset/images/common/greeting_miliKang.jpg" alt="Jake Knapp" />
+                  </div>
+                </div>
+                <div class="grtText">
+                  <p data-i18n="greeting.mili.msg" class="txtBr">지금까지는 LINE이 사용하기 <br />쉬운 삶에 도움이 되는, 친밀감 있는 <br />경험을 주 었다면 앞으로는 더욱 <br />그들의 인생의 순간에 새로운 놀라움, <br />즐거운 경험과 감동을 주는 순간들을 만들어준다면 사람들의 인생에 행복을 선사하는 것이다.</p>
+                </div>
+              </div>
+              <div class="grtInner"></div>
+            </div>
+          </div>
+          <div class="endGrt" id="endGrt">
+            <div class="endGrtText">
+              <p data-i18n="greeting.ending" class="txtBr">LINE의 디자인은 제품, 서비스, 기술에 <br />새로운 생명을 불어넣어 당신의 삶을 더욱 풍성하게 채웁니다. <br />사용자의 일상에 최적화된 디자인으로 시각적인 편안함과 <br />스마트한 경험을 넘어선 새로운 영감을 부여합니다.</p>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="event">
+          <div class="eventArea">
+            <div class="endSequence">
+              <div class="endSq">
+                <canvas id="endBook"></canvas>
+              </div>
+            </div>
+            <div class="eventCont">
+              <div class="eventInner">
+                <div class="messageArea">
+                  <div class="messageCont">
+                    <div class="messageTxt">
+                      <h4 class="txtBr" data-i18n="event.title">Introducing <br />LINE GROUND</h4>
+                      <p>
+                        <b data-i18n="event.sub">이벤트 기간 및 당첨자</b>
+                        <i></i>
+                        <b data-i18n="event.date">2022. 5. 15 ~ 30, 개별연락</b>
+                      </p>
+                      <span data-i18n="event.desc" class="txtBr">LINE CREATIVE의 핵심 가치와 철학이 담긴 LINE GROUND에 여러분을 초대합니다. 도서에 대한 기대감을 한 줄 메시지로 표현 해 주시면 추첨을 통해 200분께 LINE GROUND 도서와 굿즈를 보내드립니다.</span>
+                    </div>
+                    <div class="messagesBtn">
+                      <a href="https://feedback.line.me/enquete/public/15962-bbAXYBfd" target="_blank">
+                        <span class="backImg">
+                          <img src="../asset/images/common/event_applyImg.png" alt="" />
+                        </span>
+                        <sub class="applyTxt">
+                          <span data-i18n="event.apply">응모하기</span>
+                        </sub>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="messeageResult">
+                <p data-i18n="event.result.title">LINE GROUND book in your hand!</p>
+                <span data-i18n="event.result.desc">LINE GROUND 도서를 향한 <br />전세계 여러분들의 성원에 감사드립니다.</span>
+              </div> -->
+                <div class="messageTextBox">
+                  <div class="massageTextCont">
+                    <!-- // API 메시지들 -->
+                    <div class="messageList messageMask">
+                      <div class="messageItems">
+                        <!-- <p class="msgItem">01궁금해요.</p> -->
+                      </div>
+                    </div>
+
+                    <!-- progress -->
+                    <a href="javascript:;" class="messageProgress">
+                      <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path filter="url(#filter0_d_147_524)" d="M28 0C23.5817 0 20 3.58172 20 8V47C20 51.4183 23.5817 55 28 55H44V64.5858C44 65.4767 45.0771 65.9229 45.7071 65.2929L56 55H192C196.418 55 200 51.4183 200 47V8C200 3.58172 196.418 0 192 0H28Z" fill="#151519" />
+                        <mask id="mask0_46_16" style="mask-type: alpha" maskUnits="userSpaceOnUse">
+                          <rect id="progressEnd" width="220" height="106" fill="red" />
+                        </mask>
+                        <g mask="url(#mask0_46_16)">
+                          <path id="progressBg" d="M28 0C23.5817 0 20 3.58172 20 8V47C20 51.4183 23.5817 55 28 55H44V64.5858C44 65.4767 45.0771 65.9229 45.7071 65.2929L56 55H192C196.418 55 200 51.4183 200 47V8C200 3.58172 196.418 0 192 0H28Z" fill="#06C755" />
+                        </g>
+                        <defs>
+                          <filter id="filter0_d_147_524" x="0" y="0" width="220" height="105.588" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset dy="20" />
+                            <feGaussianBlur stdDeviation="10" />
+                            <feComposite in2="hardAlpha" operator="out" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_147_524" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_147_524" result="shape" />
+                          </filter>
+                        </defs>
+                      </svg>
+
+                      <!-- 유저 이름 -->
+                      <sub class="bylineItems">
+                        <b class="bylineItem" data-i18n="event.viewAll">전체 메시지보기</b>
+                      </sub>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer id="footer">
+        <div class="footCont">
+          <div class="companyName">
+            <p>© LINE</p>
+          </div>
+          <div class="lineCreative">
+            <a href="https://creative.line.me/" target="_blank">
+              LINE Creative
+              <span></span>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

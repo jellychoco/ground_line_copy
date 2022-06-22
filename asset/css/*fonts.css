@@ -1,0 +1,43 @@
+/* 국문, 영문 레귤러,볼트 공통 */
+@font-face {
+  font-family: 'LINESeedSansKR';
+  font-style: normal;
+  font-weight: 400;
+  /* src: url("../fonts/LINESeedSansKR-Rg.eot"); */
+  src: url('../fonts/LINESeedSansKR_Rg.woff2') format('woff2'), url('../fonts/LINESeedSansKR_Rg.woff') format('woff'), url('../fonts/LINESeedSansKR_Rg.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'LINESeedSansKR';
+  font-style: normal;
+  font-weight: 700;
+  /* src: url("../fonts/LINESeedSansKR-Bd.eot"); */
+  src: url('../fonts/LINESeedSansKR_Bd.woff2') format('woff2'), url('../fonts/LINESeedSansKR_Bd.woff') format('woff'), url('../fonts/LINESeedSansKR_Bd.ttf') format('truetype');
+}
+/* 국문, 영문 레귤러,볼트 공통 */
+
+/* 영문 엑스트라 볼트 */
+@font-face {
+  font-family: 'LINESeedSansEN';
+  font-style: normal;
+  font-weight: 800;
+  /* src: url("../fonts/LINESeedSans_W_XBd.eot"); */
+  /* src: url("../fonts/LINESeedSans_W_XBd.eot?#iefix") format("embedded-opentype"), */
+  src: url('../fonts/LINESeedSans_XBd.woff2') format('woff2'), url('../fonts/LINESeedSans_XBd.woff') format('woff'), url('../fonts/LINESeedSans_XBd.ttf') format('truetype');
+}
+/* 영문 엑스트라 볼트 */
+
+/* 일어 폰트 */
+/* @font-face {
+    font-family: "LINESeedSansJP";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/NotoSansJP_Rg.woff2") format("woff2"), url("../fonts/NotoSansJP_Rg.woff") format("woff"), url("../fonts/NotoSansJP_Rg.ttf") format("truetype");
+  } */
+
+/* @font-face {
+    font-family: "LINESeedSansJP";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/LINESeedSansJP_Bd.woff2") format("woff2"), url("../fonts/LINESeedSansJP_Bd.woff") format("woff"), url("../fonts/LINESeedSansJP_Bd.ttf") format("truetype");
+  } */

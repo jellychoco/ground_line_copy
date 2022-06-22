@@ -1,0 +1,23 @@
+@import './fonts.css';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+:root {
+  --color-black0: #000;
+  --color-black50: #111;
+  --color-black100: #151519;
+  --color-black200: #1d1d21;
+  --color-black300: #444453;
+
+  --color-gray: #e9eaed;
+
+  --color-white: #fff;
+
+  --color-green0: #06c755;
+  --color-green100: #00e05b;
+
+  --color-skyblue: #00b7df;
+
+  --font-lineKR: 'LINESeedSansKR', 'LINESeedSansEN', sans-serif;
+  --font-lineEN: 'LINESeedSansEN', 'LINESeedSansKR', sans-serif;
+  --font-lineJP: 'SFPro', 'Arial', 'Noto Sans JP', sans-serif;
+}

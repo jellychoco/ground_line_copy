@@ -1,0 +1,1007 @@
+.detailBg {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 150%;
+  height: 100%;
+  z-index: 10000;
+  opacity: 1;
+  visibility: visible;
+  background: #151519;
+  /* background: url(../images/common/detailBg/layerPopupBg2.png) center center no-repeat; */
+  /* background-size: cover !important; */
+}
+
+.layerPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.layerWrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #fff;
+  transform: translate(100%, 0);
+}
+
+/* layer head */
+.layerHead {
+  padding: 0 5rem;
+  height: 12rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.layerHeadText {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.layerHeadText p {
+  font-size: 1.6rem;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  color: var(--color-black0);
+  font-family: var(--font-lineKR);
+  text-transform: uppercase;
+}
+
+.layerHeadText span {
+  width: 0.1rem;
+  height: 1.2rem;
+  background: var(--color-black0);
+  opacity: 0.3;
+  margin: 0 1rem;
+}
+
+.layerClose {
+  width: 4rem;
+  height: 4rem;
+  display: block;
+}
+
+.layerClose a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url(../images/common/close_w.svg) center center;
+  background-size: cover;
+  transition: background 0.5s;
+}
+
+.layerClose.on a {
+  background: url(../images/common/close_b.svg) center center;
+  background-size: cover;
+}
+/* layer head */
+
+/* layer progress */
+.layerProgress {
+  left: 5rem;
+  bottom: 5rem;
+  width: 21rem;
+  height: 0.2rem;
+  position: fixed;
+  z-index: 2;
+  opacity: 1;
+}
+
+.layerProgressbar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.proceeding {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--color-black0);
+  display: block;
+  transition: width 0.3s;
+}
+/* layer progress */
+
+/* layer Main */
+.layerContainer {
+  min-width: 100%;
+  height: 100%;
+  font-size: 0;
+  position: relative;
+  white-space: nowrap;
+  transition: left 0.3s;
+}
+
+.layerInner {
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+}
+
+/* .opacityAni{
+    opacity: 0;
+  } */
+
+.layerMain {
+  width: 112rem;
+  height: 100%;
+  white-space: normal;
+}
+
+.layerMainTitle {
+  padding: 12rem 10rem 0 36rem;
+}
+
+.layerMainTitle h4 {
+  font-size: 8rem;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  color: var(--color-black0);
+  /* font-family: var(--font-lineKR); */
+}
+
+.layerMainInner {
+  margin-top: 6rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.layerMainLogo {
+  margin-right: 8rem;
+}
+
+.layerMainHistory p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  color: var(--color-black0);
+  /* font-family: var(--font-lineKR); */
+  opacity: 0.6;
+}
+
+.layerMainHistory p + p {
+  margin-top: 1.6rem;
+}
+
+.layerMainText {
+  margin-top: 10rem;
+  padding: 0 17rem 0 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.layerMain .layerMainSubTitle {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  color: var(--color-green0);
+  font-family: var(--font-lineKR);
+}
+
+.layerMainDesc {
+  width: 60rem;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  color: var(--color-black0);
+  /* font-family: var(--font-lineKR); */
+}
+/* layer Main */
+
+/* layer ImgArea */
+.layerImgArea {
+  width: 81rem;
+  height: 100vh;
+  position: relative;
+}
+
+.layerImgBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.layerImgBox img {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* layer ImgArea */
+
+/* layer grid */
+.layerGrid {
+  padding: 12rem 12rem 12rem 16rem;
+  position: relative;
+  height: 100%;
+  font-size: 0;
+  /* white-space: nowrap; */
+}
+
+.columns {
+  white-space: normal;
+  margin: 0 12rem;
+  column-gap: 24rem;
+  column-rule: 1px solid rgba(0, 0, 0, 0.08);
+  height: 100%;
+  column-fill: auto;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+
+.columns:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -12rem;
+  width: 1px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.columns.w480 {
+  column-width: 48rem;
+}
+
+.columns.w480 p {
+  width: 48rem;
+}
+
+.columns.w545 {
+  column-width: 54.5rem;
+}
+
+.columns.w545 p {
+  width: 54.5rem;
+}
+
+.columns.w620 {
+  column-width: 62rem;
+}
+
+.columns.w620 p {
+  width: 62rem;
+}
+
+.columns.w1045 {
+  column-width: 104.5rem;
+}
+
+.columns.w1045 p {
+  width: 104.5rem;
+}
+
+.columns.w1115 {
+  column-width: 111.5rem;
+}
+
+.columns.w1115 p {
+  width: 111.5rem;
+}
+
+.columns.w1120 {
+  column-width: 112rem;
+}
+
+.columns.w1120 p {
+  width: 112rem;
+}
+
+.columns.w1600 {
+  column-width: 160rem;
+}
+
+.columns.w1600 p {
+  width: 160rem;
+}
+
+.columns.w1680 {
+  column-width: 168rem;
+}
+
+.columns.w1680 p {
+  width: 168rem;
+}
+
+.columns.w2710 {
+  column-width: 271rem;
+}
+
+.columns.w2710 p {
+  width: 271rem;
+}
+
+.columns + .columns:not(:last-of-type) {
+  margin: 0 12rem;
+}
+
+.columns:first-of-type {
+  margin-left: 0;
+}
+
+.columns:first-of-type:after {
+  display: none;
+}
+
+.columns:last-of-type {
+  margin-right: 0;
+}
+
+.columns * {
+  display: block;
+}
+.columns em {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.jpBody .columns em {
+  vertical-align: baseline;
+}
+
+.columns p {
+  word-break: break-word;
+}
+
+.columns sub {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-black0);
+}
+
+.columns sub.pb2 {
+  padding-bottom: 5rem;
+}
+
+.columns b {
+  font-size: 2.8rem;
+  line-height: 1.6;
+  font-weight: 700;
+  color: var(--color-black0);
+}
+
+.columns span {
+  margin-top: 4rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-black0);
+}
+
+.columns img {
+  margin-top: 4rem;
+  width: 100%;
+}
+
+.columns .mt0 {
+  margin-top: 0;
+}
+
+.columns .mb4 {
+  margin-bottom: 4rem;
+}
+
+/* layer grid */
+
+/* layer next btn */
+.layerBtnBox {
+  margin-left: -12rem;
+  padding: 12rem 0;
+  width: 70rem;
+  height: 100%;
+  position: relative;
+}
+
+.layerBtnBox.ml0 {
+  margin-left: 0;
+}
+
+.layerBtnBox.ml4 {
+  margin-left: 4rem;
+}
+
+.layerBtnBox .layerBtn {
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+  padding-left: 12rem;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.layerBtnBox .layerBtn.bd0 {
+  border-left: 0;
+}
+
+.layerBtnBox .layerBtn a {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.layerBtnBox .layerBtn a > img {
+  width: 12rem;
+  height: 16rem;
+  margin-right: 2.5rem;
+  display: inline-flex;
+}
+
+.layerBtnBox .layerBtn a span {
+  font-size: 3rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-weight: 800;
+  color: var(--color-black0);
+  font-family: var(--font-lineEN);
+  display: inline-flex;
+  flex-direction: column;
+  transition: color 0.3s;
+}
+
+.layerBtnBox .layerBtn a span b {
+  display: block;
+  margin-top: 2rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  position: relative;
+  overflow: hidden;
+  transition: width 0.3s;
+}
+
+.layerBtnBox .layerBtn a span b i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url(../images/common/layerArr_b.svg) center center no-repeat;
+  background-size: 100% 100%;
+}
+
+.layerBtnBox .layerBtn a:hover span {
+  color: var(--color-green0);
+}
+
+.layerBtnBox .layerBtn a:hover b {
+  width: 8.9rem;
+}
+
+.layerBtnBox .layerBtn a:hover b i {
+  background: url(../images/common/layerArr_g.svg) center center no-repeat;
+  background-size: 100%;
+}
+/* layer next btn */
+
+/* layer text, mission popup */
+.layerTextArea {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.layerTextInner {
+  width: 100%;
+  height: 100%;
+  padding: 0 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.layerTextInner .layerTextBox {
+  width: 100%;
+  position: relative;
+}
+
+.layerTextInner .layerTextBox b {
+  width: 10rem;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  font-family: var(--font-lineKR);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.layerTextInner .layerTextBox b i {
+  margin-top: 3rem;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  font-family: var(--font-lineKR);
+  display: block;
+  font-style: normal;
+}
+
+.layerTextInner .layerTextBox p {
+  margin: 0 auto;
+  width: 72rem;
+  font-weight: 700;
+}
+
+.layerTextBtnBox {
+  position: absolute;
+  right: 5rem;
+  bottom: 12rem;
+}
+
+.layerTextBtnBox .layerBtn {
+  display: flex;
+  align-items: flex-start;
+}
+
+.layerTextBtnBox .layerBtn a {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.layerTextBtnBox .layerBtn a > img {
+  width: 12rem;
+  height: 16rem;
+  margin-right: 2.5rem;
+  display: inline-flex;
+}
+
+.layerTextBtnBox .layerBtn a span {
+  font-size: 3rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-weight: 800;
+  color: var(--color-black0);
+  font-family: var(--font-lineEN);
+  display: inline-flex;
+  flex-direction: column;
+  transition: color 0.3s;
+}
+
+.layerTextBtnBox .layerBtn a span b {
+  display: block;
+  margin-top: 2rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  position: relative;
+  overflow: hidden;
+  transition: width 0.3s;
+}
+
+.layerTextBtnBox .layerBtn a span b i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url(../images/common/layerArr_b.svg) center center no-repeat;
+  background-size: 100% 100%;
+}
+
+.layerTextBtnBox .layerBtn a:hover b {
+  width: 8.9rem;
+}
+
+.layerWrap.green {
+  background: #06c755;
+  transform: translateX(0);
+}
+
+.layerWrap.yellow {
+  background: #ffe71a;
+  transform: translateX(0);
+}
+
+.layerWrap.green .layerHead,
+.layerWrap.yellow .layerHead {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: none;
+}
+
+.layerWrap.green .layerTextBox b,
+.layerWrap.yellow .layerTextBox b {
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+.layerWrap.green .layerTextBox p,
+.layerWrap.yellow .layerTextBox p {
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+.layerWrap.green .layerTextBtnBox,
+.layerWrap.yellow .layerTextBtnBox {
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+.layerWrap.green .layerClose a,
+.layerWrap.yellow .layerClose a {
+  background: url(../images/common/close_b.svg) center center;
+}
+
+.layerWrap.green .layerTextBtnBox .layerBtn a:hover span {
+  color: var(--color-white);
+}
+
+.layerWrap.green .layerTextInner .layerTextBox b {
+  color: var(--color-white);
+}
+
+.layerWrap.green .layerTextInner .layerTextBox p {
+  font-size: 3rem;
+  line-height: 1.8;
+  letter-spacing: -0.01em;
+  color: var(--color-white);
+}
+
+.layerWrap.green .layerTextBtnBox .layerBtn a:hover b i {
+  background: url(../images/common/layerArr_w.svg) center center no-repeat;
+  background-size: 100%;
+}
+
+.layerWrap.yellow .layerTextBtnBox .layerBtn a:hover span {
+  color: #06c755;
+}
+
+.layerWrap.yellow .layerTextInner .layerTextBox b {
+  color: #00b76f;
+}
+
+.layerWrap.yellow .layerTextInner .layerTextBox p {
+  font-size: 4rem;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+  font-family: var(--font-lineKR);
+  color: #00b76f;
+}
+
+.layerWrap.yellow .layerTextInner .layerTextBox p span {
+  margin-top: 3rem;
+  font-size: 1.8rem;
+  color: #00b76f;
+  display: block;
+}
+
+.layerWrap.yellow .layerTextBtnBox .layerBtn a:hover b i {
+  background: url(../images/common/layerArr_g.svg) center center no-repeat;
+  background-size: 100%;
+}
+/* layer text, mission popup */
+
+@media all and (min-height: 1080px) {
+  /* Layer img */
+  .layerImgArea {
+    width: 75vh;
+  }
+  /* Layer img */
+}
+
+@media screen and (max-height: 1080px) {
+  /* layer head */
+  .layerHead {
+    padding: 0 4.63vh;
+    height: 11.11vh;
+  }
+
+  .layerHeadText p {
+    font-size: 1.48vh;
+  }
+
+  .layerHeadText span {
+    height: 1.11vh;
+    margin: 0 0.93vh;
+  }
+
+  .layerClose {
+    width: 3.7vh;
+    height: 3.7vh;
+  }
+  /* layer head */
+
+  /* layer progress */
+  .layerProgress {
+    left: 4.63vh;
+    bottom: 4.63vh;
+  }
+  /* layer progress */
+
+  /* layer Main */
+
+  .layerMainTitle {
+    padding: 11.11vh 17rem 0 36rem;
+  }
+
+  .layerMainTitle h4 {
+    font-size: 7.41vh;
+  }
+
+  .layerMainInner {
+    margin-top: 5.56vh;
+  }
+
+  .layerMainLogo {
+    margin-right: 7.41vh;
+  }
+
+  .layerMainHistory p {
+    font-size: 1.3vh;
+  }
+
+  .layerMainHistory p + p {
+    margin-top: 1.48vh;
+  }
+
+  .layerMainText {
+    margin-top: 9.26vh;
+    padding: 0 17rem 0 4.63vh;
+  }
+
+  .layerMainSubTitle {
+    font-size: 1.67vh;
+  }
+
+  .layerMainDesc {
+    font-size: 1.67vh;
+  }
+  /* layer Main */
+
+  /* layer grid */
+  .layerGrid {
+    padding: 11.11vh 11.11vh 11.11vh 14.81vh;
+  }
+
+  .columns {
+    column-gap: 22.22vh;
+    margin: 0 11.11vh;
+  }
+
+  .columns:after {
+    left: -11.11vh;
+  }
+
+  .columns.w480 {
+    column-width: 44.44vh;
+  }
+
+  .columns.w480 p {
+    width: 44.44vh;
+  }
+
+  .columns.w545 {
+    column-width: 50.46vh;
+  }
+
+  .columns.w545 p {
+    width: 50.46vh;
+  }
+
+  .columns.w620 {
+    column-width: 57.41vh;
+  }
+
+  .columns.w620 p {
+    width: 57.41vh;
+  }
+
+  .columns.w1045 {
+    column-width: 96.76vh;
+  }
+
+  .columns.w1045 p {
+    width: 96.76vh;
+  }
+
+  .columns.w1115 {
+    column-width: 103.24vh;
+  }
+
+  .columns.w1115 p {
+    width: 103.24vh;
+  }
+
+  .columns.w1120 {
+    column-width: 103.7vh;
+  }
+
+  .columns.w1120 p {
+    width: 103.7vh;
+  }
+
+  .columns.w1600 {
+    column-width: 148.15vh;
+  }
+
+  .columns.w1600 p {
+    width: 148.15vh;
+  }
+
+  .columns.w1680 {
+    column-width: 155.56vh;
+  }
+
+  .columns.w1680 p {
+    width: 155.56vh;
+  }
+
+  .columns.w2710 {
+    column-width: 250.93vh;
+  }
+
+  .columns.w2710 p {
+    width: 250.93vh;
+  }
+
+  .columns + .columns:not(:last-of-type) {
+    margin: 0 11.11vh;
+  }
+
+  .columns:first-of-type {
+    margin-left: 0;
+  }
+
+  .columns:first-of-type:after {
+    display: none;
+  }
+
+  .columns sub {
+    font-size: 1.85vh;
+  }
+
+  .columns sub.pb2 {
+    padding-bottom: 4.63vh;
+  }
+
+  .columns sub {
+    font-size: 1.85vh;
+  }
+  .columns b {
+    font-size: 2.59vh;
+  }
+
+  .columns span {
+    margin-top: 3.7vh;
+    font-size: 1.85vh;
+  }
+
+  .columns img {
+    margin-top: 3.7vh;
+  }
+
+  .columns .mt0 {
+    margin-top: 0;
+  }
+
+  .columns .mb4 {
+    margin-bottom: 3.7vh;
+  }
+  /* layer grid */
+
+  /* layer next btn */
+  .layerBtnBox {
+    margin-left: -11.11vh;
+    padding: 11.11vh 0;
+    width: 64.81vh;
+  }
+
+  .layerBtnBox.ml4 {
+    margin-left: 3.7vh;
+  }
+
+  .layerBtnBox .layerBtn {
+    padding-left: 11.11vh;
+  }
+
+  .layerBtnBox .layerBtn a > img {
+    width: 11.11vh;
+    height: 14.81vh;
+    margin-right: 2.31vh;
+  }
+
+  .layerBtnBox .layerBtn a span {
+    font-size: 2.78vh;
+  }
+
+  .layerBtnBox .layerBtn a span b {
+    margin-top: 1.85vh;
+    width: 2.22vh;
+    height: 2.22vh;
+  }
+
+  .layerBtnBox .layerBtn a:hover b {
+    width: 8.24vh;
+  }
+  /* layer next btn */
+  /* layer grid */
+
+  /* layer text, mission popup */
+  .layerTextInner {
+    padding: 0 4.63vh;
+  }
+
+  .layerTextInner .layerTextBox b {
+    width: 9.26vh;
+    font-size: 1.67vh;
+  }
+
+  .layerTextInner .layerTextBox b i {
+    margin-top: 2.78vh;
+    font-size: 1.67vh;
+  }
+
+  .layerTextInner .layerTextBox p {
+    width: 66.67vh;
+  }
+
+  .layerTextBtnBox {
+    right: 4.63vh;
+    bottom: 11.11vh;
+  }
+
+  .layerTextBtnBox .layerBtn a > img {
+    width: 11.11vh;
+    height: 14.81vh;
+    margin-right: 2.31vh;
+  }
+
+  .layerTextBtnBox .layerBtn a span {
+    font-size: 2.78vh;
+  }
+
+  .layerTextBtnBox .layerBtn a span b {
+    margin-top: 1.85vh;
+    width: 2.22vh;
+    height: 2.22vh;
+  }
+
+  .layerTextBtnBox .layerBtn a:hover b {
+    width: 8.24vh;
+  }
+
+  .layerWrap.green .layerTextInner .layerTextBox p {
+    font-size: 2.78vh;
+  }
+
+  .layerWrap.yellow .layerTextInner .layerTextBox p {
+    font-size: 3.7vh;
+  }
+
+  .layerWrap.yellow .layerTextInner .layerTextBox p span {
+    margin-top: 2.78vh;
+    font-size: 1.67vh;
+  }
+  /* layer text, mission popup */
+}
